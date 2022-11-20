@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "python-sqlachemy"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "python_sqlachemy"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqlalchemy = "^1.4.44"
+tqdm = "^4.64.1"
+psycopg2-binary = "^2.9.5"
+greenlet = "^2.0.1"
+
+
+[tool.poetry.group.dev.dependencies]
+autopep8 = "^2.0.0"
+black = "^22.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
