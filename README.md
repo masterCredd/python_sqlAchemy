@@ -31,11 +31,11 @@
     pip install --require-hashes -r requirements.txt
     ````
 
-* [x]  **Sessão: 1- Apresentação**
+* :negative_squared_cross_mark:  **Sessão: 1- Apresentação**
 
-* [x] **Sessão:2- Introdução ao SQL Alchemy**
+* :negative_squared_cross_mark: **Sessão:2- Introdução ao SQL Alchemy**
 
-* [x] **Sessão:3- Modelagem de Dados com SQLAlchemy**
+* :negative_squared_cross_mark: **Sessão:3- Modelagem de Dados com SQLAlchemy**
 
 **Sessão:4-Manipulando Dados com SQLAlchemy**
 
