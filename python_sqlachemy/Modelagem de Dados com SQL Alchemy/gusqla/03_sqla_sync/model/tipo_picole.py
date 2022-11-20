@@ -3,9 +3,9 @@ from datetime import datetime
 from conf.db_session import ModelBase
 
 
-class TipoEmbalagem(ModelBase):
+class TipoPicole(ModelBase):
 
-    __tablename__ = 'tipos_embalagem'
+    __tablename__ = 'tipos_picole'
 
     id = Column(
         BigInteger,
@@ -24,4 +24,4 @@ class TipoEmbalagem(ModelBase):
     )
 
     def __repr__(self) -> str:
-        return f'<Tipo Emalagem: {self.nome}>'
+        return f'<Tipo Picole: {self.nome}>'
