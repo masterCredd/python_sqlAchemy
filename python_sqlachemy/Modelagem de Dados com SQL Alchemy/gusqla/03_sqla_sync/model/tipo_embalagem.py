@@ -24,4 +24,13 @@ class TipoEmbalagem(ModelBase):
     )
 
     def __repr__(self) -> str:
+        """
+        The __repr__ function is what defines the string representation of an object.
+        It's called by the repr() built-in function and by string conversions (reverse quotes).
+        The __repr__ method is used to display data in a way that can be copied and pasted into code.
+
+        :param self: Refer to the instance of the class
+        :return: The string representation of the object
+        :doc-author: Trelent
+        """
         return f'<Tipo Emalagem: {self.nome}>'

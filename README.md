@@ -3,11 +3,11 @@
 ### SQL Alchemy: Essencial
 
 ---
-
+****
 *  instalar o docker
 
-
 [![texto alt](image-1.png)](https://www.docker.com/products/docker-desktop/)
+
 
 * ## configurar o ambiente do python na ultima versão
 
@@ -39,7 +39,8 @@
     pip install --require-hashes -r requirements.txt
     ````
 ---
-* :negative_squared_cross_mark:  **Sessão: 1- Apresentação**
+* :negative_squared_cross_mark:  **Sessão: 1- Apresentação** [ PARTE -1](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Apresentação)
+
 ---
  :negative_squared_cross_mark: 1. Sobre o curso
 
@@ -50,13 +51,14 @@
 
 ---
 * :negative_squared_cross_mark: **Sessão:2- Introdução ao SQL Alchemy**
+
 ---
 
 :negative_squared_cross_mark: 3. O que vamos aprender nesta seção?
- :negative_squared_cross_mark: 4. Introdução ao SQLAlchemy [PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Introdução)
+ :negative_squared_cross_mark: 4. Introdução ao SQLAlchemy :clipboard:[PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Introdução)
 
 
- :negative_squared_cross_mark: 5. Casos de sucesso do SQLAlchemy [PDF](https://github.com/masterCredd/python_sqlAchemy/blob/6907f3024dd8b670e1c29201788be8b6baf5f318/python_sqlachemy/Introdução)
+ :negative_squared_cross_mark: 5. Casos de sucesso do SQLAlchemy :clipboard: [PDF](https://github.com/masterCredd/python_sqlAchemy/blob/6907f3024dd8b670e1c29201788be8b6baf5f318/python_sqlachemy/Introdução)
 
 :negative_squared_cross_mark: 6. Entendendo a Arquitetura do SQLAlchemy [PDF]
 :negative_squared_cross_mark: 7. Recapturando
@@ -65,9 +67,9 @@
 
 
 
-
+---
 * :negative_squared_cross_mark: **Sessão:3- Modelagem de Dados com SQLAlchemy**
-
+---****
 * :negative_squared_cross_mark: 8. O que vamos aprender nesta seção?
 
  ![MarineGEO circle logo](python_sqlachemy/Modelagem%20de%20Dados%20com%20SQL%20Alchemy/01.2+-+fabrica_picoles_ordenado.png)
@@ -148,6 +150,7 @@ docker-coomposer up -d
 **Sessão:7- (Extra) SQL Model Assíncrono**
 
 ---
+* [ ]
 
 * [ ] 51. O que vamos aprender nesta seção?
 * [ ] 52. Prática: Refatorando o Projeto

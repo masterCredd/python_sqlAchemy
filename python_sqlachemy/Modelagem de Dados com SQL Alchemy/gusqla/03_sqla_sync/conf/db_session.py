@@ -15,12 +15,17 @@ __engine = None
 
 
 def createEngine(sql: bool = False):
-    """sumary_line
-    create string connection sqlite or postgresql
-    Keyword arguments:
-    argument -- description
-    Return: __engine
     """
+    The createEngine function creates a SQLAlchemy engine object.
+    It is used to create connections to the database.
+    The function takes one argument, sql, which defaults to False.
+    If sql is set to True then an SQLite database will be created in the db folder and a connection string for that database will be returned.
+
+    :param sql:bool=False: Determine whether to use sqlite or postgresql
+    :return: The engine object
+    :doc-author: Trelent
+    """
+
     global __engine
 
     type_db = 'postgresql'
@@ -56,11 +61,13 @@ def createEngine(sql: bool = False):
 
 
 def craete_session():
-    """sumary_line
-        create session db
-    Keyword arguments:
-    argument -- description
-    Return: session
+    """
+        The craete_session function creates a new SQLAlchemy session.
+        It is used to create a singleton instance of the Session class, which can be reused by multiple classes.
+        The function takes no arguments and returns an instance of the Session class.
+
+        :return: A session object that is bound to the engine
+    :doc-author: Trelent
     """
     global __engine
 
@@ -79,6 +86,13 @@ def craete_session():
 
 
 def create_tables():
+    """
+    The create_tables function creates all the tables in the database.
+
+
+    :return: The modelbase
+    :doc-author: Trelent
+    """
     global __engine
 
     if not __engine:
