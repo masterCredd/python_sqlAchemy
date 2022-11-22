@@ -81,10 +81,12 @@ docker-coomposer up -d
 ````
 
 :negative_squared_cross_mark: 9.  Prática: Criando a Estrutura do Projeto - **Parte 1**
+
 :negative_squared_cross_mark: 10. Prática: Criando a Estrutura do Projeto - **Parte 2**
+
  :negative_squared_cross_mark: 11. Prática: Criando a Models - **Parte 1**
 
-:negative_squared_cross_mark: 12. Prática: Criando a Models - **Parte 2**
+* [ ] 12. Prática: Criando a Models - **Parte 2**
 * [ ] 13. Prática: Criando a Models - **Parte 3**
 * [ ] 14. Prática: Criando as tabelas no banco de dados
 * [ ] 15. Recapturando
