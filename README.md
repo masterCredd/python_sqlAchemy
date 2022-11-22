@@ -40,7 +40,7 @@
     ````
 ---
 
-* :negative_squared_cross_mark:  **Sessão: 1- Apresentação** [PARTE -1](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Introdução%20ao%20SQL%20Alchemy)
+* :negative_squared_cross_mark:  **Sessão: 1- Apresentação** [PARTE -1](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Introdução_ao_SQL_Alchemy)
 
 ---
  :negative_squared_cross_mark: 1. Sobre o curso
@@ -52,7 +52,7 @@
 
 ---
 
-* :negative_squared_cross_mark: **Sessão:2- Introdução ao SQL Alchemy** [PARTE -2](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Modelagem%20de%20Dados%20com%20SQL%20Alchemy)
+* :negative_squared_cross_mark: **Sessão:2- Introdução ao SQL Alchemy** [PARTE -2](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy)
 
 ---
 
