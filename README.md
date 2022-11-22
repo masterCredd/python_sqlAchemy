@@ -69,10 +69,8 @@
 * :negative_squared_cross_mark: **Sessão:3- Modelagem de Dados com SQLAlchemy**
 
 * :negative_squared_cross_mark: 8. O que vamos aprender nesta seção?
-  <br/>
-  <br/>
 
- ![MarineGEO circle logo](python_sqlachemy/Modelagem%20de%20Dados%20com%20SQL%20Alchemy/01.2+-+fabrica_picoles_ordenado.png )
+ ![MarineGEO circle logo](python_sqlachemy/Modelagem%20de%20Dados%20com%20SQL%20Alchemy/01.2+-+fabrica_picoles_ordenado.png)
 
   * **(PDF)**
 
