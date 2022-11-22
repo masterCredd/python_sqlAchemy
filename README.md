@@ -43,7 +43,7 @@
 ---
  :negative_squared_cross_mark: 1. Sobre o curso
 
-![MarineGEO circle logo](python_sqlachemy\Apresentação\sql_alchemy_v3.png "Mapa do curso" )
+![MarineGEO circle logo](python_sqlachemy\Apresentação\sql_alchemy_v3.png)
 
  :negative_squared_cross_mark: 2. Como conseguimos te ajudar
 
