@@ -39,7 +39,8 @@
     pip install --require-hashes -r requirements.txt
     ````
 ---
-* :negative_squared_cross_mark:  **Sessão: 1- Apresentação** [ PARTE -1](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Apresentação)
+
+* :negative_squared_cross_mark:  **Sessão: 1- Apresentação** [PARTE -1](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Introdução%20ao%20SQL%20Alchemy)
 
 ---
  :negative_squared_cross_mark: 1. Sobre o curso
@@ -50,17 +51,19 @@
 
 
 ---
-* :negative_squared_cross_mark: **Sessão:2- Introdução ao SQL Alchemy**
+
+* :negative_squared_cross_mark: **Sessão:2- Introdução ao SQL Alchemy** [PARTE -2](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Modelagem%20de%20Dados%20com%20SQL%20Alchemy)
 
 ---
 
 :negative_squared_cross_mark: 3. O que vamos aprender nesta seção?
 
- :negative_squared_cross_mark: 4. Introdução ao SQLAlchemy :clipboard:[PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Introdução)
+ :negative_squared_cross_mark: 4. Introdução ao SQLAlchemy :clipboard:[PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Introdução%20ao%20SQL%20Alchemy/02-introducao-ao-sqlalchemy.pdf)
 
- :negative_squared_cross_mark: 5. Casos de sucesso do SQLAlchemy :clipboard: [PDF](https://github.com/masterCredd/python_sqlAchemy/blob/6907f3024dd8b670e1c29201788be8b6baf5f318/python_sqlachemy/Introdução)
+ :negative_squared_cross_mark: 5. Casos de sucesso do SQLAlchemy :clipboard: [PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Introdução%20ao%20SQL%20Alchemy/03-casos-de-sucesso-do-sqlalchemy.pdf)
 
-:negative_squared_cross_mark: 6. Entendendo a Arquitetura do SQLAlchemy [PDF]
+:negative_squared_cross_mark: 6. Entendendo a Arquitetura do SQLAlchemy [PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Introdução%20ao%20SQL%20Alchemy/04-entendendo-a-arquitetura-do-sqlalchemy.pdf)
+
 :negative_squared_cross_mark: 7. Recapturando
 
 
