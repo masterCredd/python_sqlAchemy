@@ -55,8 +55,8 @@
 ---
 
 :negative_squared_cross_mark: 3. O que vamos aprender nesta seção?
- :negative_squared_cross_mark: 4. Introdução ao SQLAlchemy :clipboard:[PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Introdução)
 
+ :negative_squared_cross_mark: 4. Introdução ao SQLAlchemy :clipboard:[PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Introdução)
 
  :negative_squared_cross_mark: 5. Casos de sucesso do SQLAlchemy :clipboard: [PDF](https://github.com/masterCredd/python_sqlAchemy/blob/6907f3024dd8b670e1c29201788be8b6baf5f318/python_sqlachemy/Introdução)
 
