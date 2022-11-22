@@ -69,12 +69,10 @@
 
 ---
 * :negative_squared_cross_mark: **Sessão:3- Modelagem de Dados com SQLAlchemy**
----****
+---
 * :negative_squared_cross_mark: 8. O que vamos aprender nesta seção?
 
  ![MarineGEO circle logo](python_sqlachemy/Modelagem%20de%20Dados%20com%20SQL%20Alchemy/01.2+-+fabrica_picoles_ordenado.png)
-
-  * **(PDF)**
 
   * create engine docker bd postgres
 
@@ -86,7 +84,7 @@ docker-coomposer up -d
 :negative_squared_cross_mark: 10. Prática: Criando a Estrutura do Projeto - **Parte 2**
  :negative_squared_cross_mark: 11. Prática: Criando a Models - **Parte 1**
 
-* [ ] 12. Prática: Criando a Models - **Parte 2**
+:negative_squared_cross_mark: 12. Prática: Criando a Models - **Parte 2**
 * [ ] 13. Prática: Criando a Models - **Parte 3**
 * [ ] 14. Prática: Criando as tabelas no banco de dados
 * [ ] 15. Recapturando
@@ -150,7 +148,6 @@ docker-coomposer up -d
 **Sessão:7- (Extra) SQL Model Assíncrono**
 
 ---
-* [ ]
 
 * [ ] 51. O que vamos aprender nesta seção?
 * [ ] 52. Prática: Refatorando o Projeto

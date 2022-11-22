@@ -1,4 +1,7 @@
-from sqlalchemy import Column, BigInteger, DateTime, String
+from sqlalchemy import Column
+from sqlalchemy import BigInteger
+from sqlalchemy import DateTime
+from sqlalchemy import String
 from datetime import datetime
 from conf.db_session import ModelBase
 

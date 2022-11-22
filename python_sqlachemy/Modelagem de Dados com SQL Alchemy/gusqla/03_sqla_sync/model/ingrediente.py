@@ -6,9 +6,9 @@ from datetime import datetime
 from conf.db_session import ModelBase
 
 
-class TipoEmbalagem(ModelBase):
+class Ingrediente(ModelBase):
 
-    __tablename__ = 'tipos_embalagem'
+    __tablename__ = 'ingredientes'
 
     id = Column(
         BigInteger,
@@ -30,10 +30,11 @@ class TipoEmbalagem(ModelBase):
         """
         The __repr__ function is what defines the string representation of an object.
         It's called by the repr() built-in function and by string conversions (reverse quotes).
-        The __repr__ method is used to display data in a way that can be copied and pasted into code.
+        The __repr__ method is used for developer debugging and logging, not meant to be read by humans.
+        If you want a human readable explanation of your object, define a __str__ method.
 
-        :param self: Refer to the instance of the class
+        :param self: Access the attributes and methods of the class
         :return: The string representation of the object
         :doc-author: Trelent
         """
-        return f'<Tipo Emalagem: {self.nome}>'
+        return f'<Ingrediente: {self.nome}>'
