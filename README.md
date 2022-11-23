@@ -40,7 +40,7 @@
 
 * ### Instalação do DBeaver para manipulação de banco de dados
 
-[![Alt text](/img\Untitled-2.png)](https://dbeaver.io/download/)
+[![Alt text](/img/Untitled-2.png)](https://dbeaver.io/download/)
 
 
 ---
