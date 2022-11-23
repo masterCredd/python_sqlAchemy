@@ -7,7 +7,7 @@
 
     [![texto alt](/img/image-1.png)](https://www.docker.com/products/docker-desktop/)
 
-* ### Configurar o ambiente do python na ultima versão
+  * ### Configurar o ambiente do python na ultima versão
 
   [![Alt text](/img/image.png)](https://hub.docker.com/_/python/)
 
