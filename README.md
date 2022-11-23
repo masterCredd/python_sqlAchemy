@@ -79,13 +79,13 @@
 
 * ✅ 8. O que vamos aprender nesta seção?
 
- ![MarineGEO circle logo](python_sqlachemy\Modelagem_de_Dados_com_SQL_Alchemy\01.2+-+fabrica_picoles_ordenado.png)
+ ![circle logo](python_sqlachemy\Modelagem_de_Dados_com_SQL_Alchemy\01.2+-+fabrica_picoles_ordenado.png)
 
 
 * create engine docker bd postgres
 
 ````bash
-    docker-coomposer up -d
+    docker-composer up -d
 ````
 
 ✅ 9.  Prática: Criando a Estrutura do Projeto - **Parte 1**
