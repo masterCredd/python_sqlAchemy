@@ -79,7 +79,7 @@
 
 * ✅ 8. O que vamos aprender nesta seção?
 
-![Alt text](python_sqlachemy\Modelagem_de_Dados_com_SQL_Alchemy\01.2+-+fabrica_picoles_ordenado.png)
+![image](https://user-images.githubusercontent.com/16502108/203575271-44ae4b7f-a433-466c-8f4a-11e39ea63397.png)
 
 * create engine docker bd postgres
 
