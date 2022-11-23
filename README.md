@@ -1,5 +1,5 @@
 
-###  SQL Alchemy: Essencial _Curso
+### SQL Alchemy: Essencial _Curso  🍧
 
 ---
 
@@ -45,6 +45,7 @@
 
 ---
 
+
 * ✅  **Sessão: 1- Apresentação** [PARTE -1](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Introdução_ao_SQL_Alchemy)
 
 ---
@@ -54,18 +55,19 @@
 
  ✅ 2. Como conseguimos te ajudar
 
-
 ---
 
 * ✅ **Sessão:2- Introdução ao SQL Alchemy** [PARTE -2](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy)
+
+    ![Alt text](img\image_3.png)
 
 ---
 
 ✅ 3. O que vamos aprender nesta seção?
 
- ✅ 4. Introdução ao SQLAlchemy :clipboard:[PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Introdução%20ao%20SQL%20Alchemy/02-introducao-ao-sqlalchemy.pdf)
+✅ 4. Introdução ao SQLAlchemy :clipboard:[PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Introdução%20ao%20SQL%20Alchemy/02-introducao-ao-sqlalchemy.pdf)
 
- ✅ 5. Casos de sucesso do SQLAlchemy :clipboard: [PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Introdução%20ao%20SQL%20Alchemy/03-casos-de-sucesso-do-sqlalchemy.pdf)
+✅ 5. Casos de sucesso do SQLAlchemy :clipboard: [PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Introdução%20ao%20SQL%20Alchemy/03-casos-de-sucesso-do-sqlalchemy.pdf)
 
 ✅ 6. Entendendo a Arquitetura do SQLAlchemy [PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Introdução%20ao%20SQL%20Alchemy/04-entendendo-a-arquitetura-do-sqlalchemy.pdf)
 
@@ -73,11 +75,11 @@
 
 ---
 
-* ✅ **Sessão:3- Modelagem de Dados com SQLAlchemy**
+* ✅ **Sessão:3- Modelagem de Dados com SQLAlchemy** [PARTE -3](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy)
 
 ---
 
-* ✅ 8. O que vamos aprender nesta seção?
+✅ 8. O que vamos aprender nesta seção?
 
 ![image](https://user-images.githubusercontent.com/16502108/203575271-44ae4b7f-a433-466c-8f4a-11e39ea63397.png)
 
@@ -91,15 +93,15 @@
 
 ✅ 10. Prática: Criando a Estrutura do Projeto - **Parte 2**
 
- ✅ 11. Prática: Criando a Models - **Parte 1**
+✅ 11. Prática: Criando a Models - **Parte 1**
 
-✅12. Prática: Criando a Models - **Parte 2**
+✅ 12. Prática: Criando a Models - **Parte 2**
 
 ✅ 13. Prática: Criando a Models - **Parte 3**
 
-* 🔲 14. Prática: Criando as tabelas no banco de dados
+✅ 14. Prática: Criando as tabelas no banco de dados
 
-* 🔲 15. Recapturando
+✅ 15. Recapturando
 
 ---
 
@@ -107,10 +109,14 @@
 
 ---
 
-* 🔲 16. O que vamos aprender nesta seção?
-* 🔲 17. Entendendo o Padrão Unit of Work **(PDF)**
+✅ 16. O que vamos aprender nesta seção?
+
+✅ 17. Entendendo o Padrão Unit of Work **(PDF)**
+
 * 🔲 18. Prática: Inserindo Dados - Create(`Insert`) - **Parte 1**
+
 * 🔲 19. Prática: Inserindo Dados - Create(`Insert`) - **Parte 2**
+
 * 🔲 20. Prática: Zerando e Populando o Banco de Dados
 * 🔲 21. Prática: Buscando Dados - Read(`Select`) - **Parte 1**
 * 🔲 22. Prática: Buscando Dados - Read(`Select`) - **Parte 2**
