@@ -25,11 +25,11 @@
     python --version
     ````
 
-* ✔️ Resposta:
+* ✔️ <mark>Resposta:</mark>
 
     ````txt
-      [<terminal>]
-      Python 3.11.0 <retorno>
+
+      Python 3.11.0
     ````
 
 * ###  Instalar os pacotes necessários para fazer a aula
