@@ -25,7 +25,7 @@
     python --version
     ````
 
-* ✔️ <mark>Resposta:</mark>
+* ✔️ Resposta:
 
     ````txt
 
