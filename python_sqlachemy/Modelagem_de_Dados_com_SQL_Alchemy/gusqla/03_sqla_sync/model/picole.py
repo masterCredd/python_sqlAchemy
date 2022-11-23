@@ -10,7 +10,13 @@ from datetime import datetime
 from model.sabor import Sabor
 from model.tipo_embalagem import TipoEmbalagem
 from model.tipo_picole import TipoPicole
+from model.ingrediente import Ingrediente
+from model.conservante import Conservante
+from model.aditivo_nutritivo import AditivoNutritivo
+from typing import Optional
+from typing import List
 from conf.db_session import ModelBase
+
 
 ingredientes_picoles = Table(
     'ingredientes_picole',
@@ -88,32 +94,41 @@ class Picole(ModelBase):
         Integer,
         ForeignKey('tipos_embalagem.id')
     )
-    tipo_embalagem = relationship(
+
+    tipo_embalagem: TipoEmbalagem = relationship(
         'TipoEmbalagem',
         lazy='joined'
     )
+
     id_tipo_picole = Column(
         Integer,
         ForeignKey('tipos_picole.id')
     )
-    tipo_embalagem = relationship(
+
+    tipo_picole: TipoPicole = relationship(
         'Tipopicole',
         lazy='joined'
     )
-    ingredientes = relationship(
+
+    # ingredientes: List[Ingrediente]
+    ingredientes: List[Ingrediente] = relationship(
         'Ingrediente',
         secondary=ingredientes_picoles,
         backref='ingrediente',
         lazy='joined'
     )
-    conservantes = relationship(
+
+    # conservantes: Optional[List[Conservantes]]
+    # conservantes
+    conservantes: Optional[List[Conservante]] = relationship(
         'Conservante',
-        secundary=conservantes_picole,
+        secondary=conservantes_picole,
         backref='conservante',
         lazy='joined'
     )
 
-    aditivos_nutritivos = relationship(
+    # aditivos_nutritivos: Optional[List[AditivosNutritivos]]
+    aditivos_nutritivos: Optional[List[AditivoNutritivo]] = relationship(
         'AditivoNutritivo',
         secondary=aditivos_nutritivos_picole,
         backref='aditivo_nutritivo',

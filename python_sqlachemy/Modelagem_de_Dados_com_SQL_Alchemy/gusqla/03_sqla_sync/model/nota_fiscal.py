@@ -7,12 +7,12 @@ from sqlalchemy import Integer
 from sqlalchemy import BigInteger
 from sqlalchemy import DateTime
 from sqlalchemy.orm import relationship
-from sqlalchemy.orm import relation
 from datetime import datetime
 from model.revendedor import Revendedor
 from model.lote import Lote
 from conf.db_session import ModelBase
 from typing import List
+
 
 lotes_nota_fiscal = Table(
     'lotes_nota_fiscal',
@@ -53,7 +53,6 @@ class NotaFiscal(ModelBase):
         String(45),
         unique=True,
         nullable=False
-
     )
     descricao = Column(
         String(200),
@@ -61,14 +60,16 @@ class NotaFiscal(ModelBase):
     )
     id_revendodor = Column(
         Integer,
-        ForeignKey('Revendedor.id'),
+        ForeignKey('revendedor.id'),
 
     )
-    revendedor = relationship(
+    revendedor: Revendedor = relationship(
         'Revendedor',
         lazy='joined'
     )
-    lotes = relationship(
+
+    # lotes:List[Lote]
+    lotes: List[Lote] = relationship(
         'Lote',
         secondary=lotes_nota_fiscal,
         backref='lote',
