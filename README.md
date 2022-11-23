@@ -3,9 +3,9 @@
 
 ---
 
-* ### instalar o docker
+  * ### instalar o docker
 
-[![texto alt](/img/image-1.png)](https://www.docker.com/products/docker-desktop/)
+    [![texto alt](/img/image-1.png)](https://www.docker.com/products/docker-desktop/)
 
 * ### Configurar o ambiente do python na ultima versão
 
@@ -51,7 +51,7 @@
 ---
  ✅ 1. Sobre o curso
 
-![Alt text](python_sqlachemy/Apresenta%C3%A7%C3%A3o/sql_alchemy_v3.png)
+![Alt text](/python_sqlachemy/Apresenta%C3%A7%C3%A3o/sql_alchemy_v3.png)
 
  ✅ 2. Como conseguimos te ajudar
 
@@ -111,7 +111,7 @@
 
 ✅ 16. O que vamos aprender nesta seção?
 
-✅ 17. Entendendo o Padrão Unit of Work **(PDF)**
+✅ 17. Entendendo o Padrão Unit of Work [PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Manipulando_Dados_com_SQL_Alchemy/02-entendendo-o-padrao-unit-of-work.pdf)
 
 * 🔲 18. Prática: Inserindo Dados - Create(`Insert`) - **Parte 1**
 
