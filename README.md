@@ -59,7 +59,7 @@
 
 * ✅ **Sessão:2- Introdução ao SQL Alchemy** [PARTE -2](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy)
 
-    ![Alt text](img\image_3.png)
+    ![Alt text](/img/image_3.png)
 
 ---
 
