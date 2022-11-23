@@ -81,6 +81,7 @@
 
  ![MarineGEO circle logo](python_sqlachemy\Modelagem_de_Dados_com_SQL_Alchemy\01.2+-+fabrica_picoles_ordenado.png)
 
+
 * create engine docker bd postgres
 
 ````bash
