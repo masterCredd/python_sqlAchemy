@@ -63,7 +63,7 @@
 
 ---
 
-* ✅  **Sessão: 1️⃣- Apresentação** [PARTE -1](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Introdução_ao_SQL_Alchemy)
+* ✅  **Sessão: 1️⃣ - Apresentação** [PARTE -1](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Introdução_ao_SQL_Alchemy)
 
 ---
  ✅ 1. Sobre o curso
