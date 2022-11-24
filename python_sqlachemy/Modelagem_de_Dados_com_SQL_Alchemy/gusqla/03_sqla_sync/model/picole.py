@@ -20,6 +20,7 @@ ingredientes_picoles = Table(
         Integer,
         ForeignKey('picoles.id')
     ),
+
     Column(
         'id_ingrediente',
         Integer,
@@ -35,6 +36,7 @@ conservantes_picole = Table(
         Integer,
         ForeignKey('picoles.id')
     ),
+
     Column(
         'id_conservante',
         Integer,
@@ -67,23 +69,28 @@ class Picole(ModelBase):
         primary_key=True,
         autoincrement=True
     )
+
     data_criacao = Column(
         DateTime,
         default=datetime.now,
         index=True
     )
+
     preco = Column(
         DECIMAL(8, 2),
         nullable=False
     )
+
     id_sabor = Column(
         Integer,
         ForeignKey('sabores.id')
     )
+
     sabor = relationship(
         'Sabor',
         lazy='joined'
     )
+
     id_tipo_embalagem = Column(
         Integer,
         ForeignKey('tipos_embalagem.id')

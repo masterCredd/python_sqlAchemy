@@ -15,19 +15,23 @@ class Lote(ModelBase):
         primary_key=True,
         autoincrement=True
     )
+
     data_criacao = Column(
         DateTime,
         default=datetime.now,
         index=True
     )
+
     id_tipo_picole = Column(
         Integer,
         ForeignKey('tipos_picole.id')
     )
+
     tipo_picole = relationship(
         'TipoPicole',
         lazy='joined'
     )
+
     quantidade = Column(
         Integer,
         nullable=False

@@ -3,7 +3,7 @@
 
 ---
 
-🛠️   **Tools**
+🔜 🛠️   **Tools**
 
 ---
 🔜  **[Tecnologias usadas no curso]**

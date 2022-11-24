@@ -13,16 +13,19 @@ class Conservante(ModelBase):
         primary_key=True,
         autoincrement=True
     )
+
     data_criacao = Column(
         DateTime,
         default=datetime.now,
         index=True
     )
+
     nome = Column(
         String(45),
         unique=True,
         nullable=False
     )
+    
     descricao = Column(
         String(45),
         nullable=False

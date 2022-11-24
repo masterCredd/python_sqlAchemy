@@ -13,20 +13,24 @@ class Revendedor(ModelBase):
         primary_key=True,
         autoincrement=True
     )
+
     data_criacao = Column(
         DateTime,
         default=datetime.now,
         index=True
     )
+
     cnpj = Column(
         String(45),
         unique=True,
         nullable=False
     )
+
     razao_social = Column(
         String(100),
         nullable=False
     )
+    
     contato = Column(
         String(100),
         nullable=False

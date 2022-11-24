@@ -16,6 +16,7 @@ lotes_nota_fiscal = Table(
         Integer,
         ForeignKey('notas_fiscais.id')
     ),
+
     Column(
         'id_lote',
         Integer,
@@ -34,29 +35,34 @@ class NotaFiscal(ModelBase):
         primary_key=True,
         autoincrement=True
     )
+
     data_criacao = Column(
         DateTime,
         default=datetime.now,
         index=True
     )
+
     valor = Column(
         DECIMAL(8, 2),
         nullable=False
     )
+
     numero_serie = Column(
         String(45),
         unique=True,
         nullable=False
     )
+
     descricao = Column(
         String(200),
         nullable=False
     )
+
     id_revendodor = Column(
         Integer,
         ForeignKey('revendedor.id'),
-
     )
+    
     revendedor: Revendedor = relationship(
         'Revendedor',
         lazy='joined'
