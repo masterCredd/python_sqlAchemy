@@ -8,25 +8,25 @@
 ---
 🔜  **[Tecnologias usadas no curso]**
 
-  [![texto alt](/img/docker.png)](https://www.docker.com/products/docker-desktop/ "Docker")
+ ⟹   [![texto alt](/img/docker.png)](https://www.docker.com/products/docker-desktop/ "Docker")
 
-  [![Alt text](/img/visual_studio_code.png)](https://hub.docker.com/_/python/ "Visual Studio Code")
+ ⟹   [![Alt text](/img/visual_studio_code.png)](https://hub.docker.com/_/python/ "Visual Studio Code")
 
-   [![Alt text](/img/python.png)](https://hub.docker.com/_/python/ "Python")
+⟹    [![Alt text](/img/python.png)](https://hub.docker.com/_/python/ "Python")
 
-   [![Alt text](/img/sqlachemy.png)](https://www.sqlalchemy.org/)
+⟹    [![Alt text](/img/sqlachemy.png)](https://www.sqlalchemy.org/)
 
-   [![Alt text](/img/postogres.png)](https://www.postgresql.org "PostgreSQL")
+⟹    [![Alt text](/img/postogres.png)](https://www.postgresql.org "PostgreSQL")
 
-   [![Alt text](/img/SQLite.png)](https://www.sqlite.org/ "SQLite")
+⟹    [![Alt text](/img/SQLite.png)](https://www.sqlite.org/ "SQLite")
 
-   [![Alt text](/img/dbeaver.png)](https://dbeaver.io "DBeaver")
+⟹    [![Alt text](/img/dbeaver.png)](https://dbeaver.io "DBeaver")
 
 ---
 
 * ### Configurar o ambiente do python na ultima versão
 
-    utilizando o terminal digite o seguinte
+    utilizando o **terminal** digite o seguinte
     📝 `comando:`
 
     ```bash
@@ -45,20 +45,20 @@
 * ✔️ Resposta:
 
     ````bash
-  ->  Python 3.11.0
+  -->  Python 3.11.0
     ````
 
 * ###  Instalar os pacotes necessários para fazer a aula
 
   ````bash
-  -> pip install --require-hashes -r requirements.txt
+  --> pip install --require-hashes -r requirements.txt
   ````
 
 * create engine docker bd postgres
   📝`comando:`
 
   ````bash
-  ->  docker-composer up -d
+  -->  docker-composer up -d
   ````
 
 ---

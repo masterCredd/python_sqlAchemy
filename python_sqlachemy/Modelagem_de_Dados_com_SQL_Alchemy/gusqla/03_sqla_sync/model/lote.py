@@ -1,12 +1,9 @@
-from sqlalchemy import Column
-from sqlalchemy import ForeignKey
-from sqlalchemy import Integer
-from sqlalchemy import BigInteger
-from sqlalchemy import DateTime
-from sqlalchemy.orm import relationship
 from datetime import datetime
-from model.tipo_picole import TipoPicole
+
 from conf.db_session import ModelBase
+from model.tipo_picole import TipoPicole
+from sqlalchemy import BigInteger, Column, DateTime, ForeignKey, Integer
+from sqlalchemy.orm import relationship
 
 
 class Lote(ModelBase):

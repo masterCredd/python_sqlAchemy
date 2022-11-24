@@ -1,18 +1,12 @@
-from sqlalchemy import Table
-from sqlalchemy import Column
-from sqlalchemy import DECIMAL
-from sqlalchemy import String
-from sqlalchemy import ForeignKey
-from sqlalchemy import Integer
-from sqlalchemy import BigInteger
-from sqlalchemy import DateTime
-from sqlalchemy.orm import relationship
 from datetime import datetime
-from model.revendedor import Revendedor
-from model.lote import Lote
-from conf.db_session import ModelBase
 from typing import List
 
+from conf.db_session import ModelBase
+from model.lote import Lote
+from model.revendedor import Revendedor
+from sqlalchemy import (DECIMAL, BigInteger, Column, DateTime, ForeignKey,
+                        Integer, String, Table)
+from sqlalchemy.orm import relationship
 
 lotes_nota_fiscal = Table(
     'lotes_nota_fiscal',

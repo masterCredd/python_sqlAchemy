@@ -1,22 +1,16 @@
-from sqlalchemy import DECIMAL
-from sqlalchemy import Column
-from sqlalchemy import ForeignKey
-from sqlalchemy import Table
-from sqlalchemy import Integer
-from sqlalchemy.orm import relationship
-from sqlalchemy import BigInteger
-from sqlalchemy import DateTime
 from datetime import datetime
+from typing import List, Optional
+
+from conf.db_session import ModelBase
+from model.aditivo_nutritivo import AditivoNutritivo
+from model.conservante import Conservante
+from model.ingrediente import Ingrediente
 from model.sabor import Sabor
 from model.tipo_embalagem import TipoEmbalagem
 from model.tipo_picole import TipoPicole
-from model.ingrediente import Ingrediente
-from model.conservante import Conservante
-from model.aditivo_nutritivo import AditivoNutritivo
-from typing import Optional
-from typing import List
-from conf.db_session import ModelBase
-
+from sqlalchemy import (DECIMAL, BigInteger, Column, DateTime, ForeignKey,
+                        Integer, Table)
+from sqlalchemy.orm import relationship
 
 ingredientes_picoles = Table(
     'ingredientes_picole',

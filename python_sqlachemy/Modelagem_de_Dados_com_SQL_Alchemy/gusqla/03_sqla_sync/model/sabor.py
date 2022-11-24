@@ -1,9 +1,7 @@
-from sqlalchemy import Column
-from sqlalchemy import BigInteger
-from sqlalchemy import DateTime
-from sqlalchemy import String
 from datetime import datetime
+
 from conf.db_session import ModelBase
+from sqlalchemy import BigInteger, Column, DateTime, String
 
 
 class Sabor(ModelBase):

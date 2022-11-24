@@ -1,11 +1,10 @@
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
-from sqlalchemy.orm import Session
-from sqlalchemy.future.engine import Engine
 from pathlib import Path
 from typing import Optional
-from sqlalchemy.ext.declarative import declarative_base
 
+from sqlalchemy import create_engine
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.future.engine import Engine
+from sqlalchemy.orm import Session, sessionmaker
 
 ModelBase = declarative_base()
 

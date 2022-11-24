@@ -1,9 +1,7 @@
-from conf.db_session import ModelBase
 from datetime import datetime
-from sqlalchemy import String
-from sqlalchemy import DateTime
-from sqlalchemy import BigInteger
-from sqlalchemy import Column
+
+from conf.db_session import ModelBase
+from sqlalchemy import BigInteger, Column, DateTime, String
 
 
 class AditivoNutritivo(ModelBase):
