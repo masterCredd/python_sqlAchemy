@@ -3,50 +3,67 @@
 
 ---
 
-  * ### instalar o docker
+🛠️   **Tools**
 
-    [![texto alt](/img/image-1.png)](https://www.docker.com/products/docker-desktop/)
+---
+🔜  **[Tecnologias usadas no curso]**
 
-  * ### Configurar o ambiente do python na ultima versão
+  [![texto alt](/img/docker.png)](https://www.docker.com/products/docker-desktop/ "Docker")
 
-  [![Alt text](/img/image.png)](https://hub.docker.com/_/python/)
+  [![Alt text](/img/visual_studio_code.png)](https://hub.docker.com/_/python/ "Visual Studio Code")
 
-    utilizando o terminal digite o seguinte  📝 `comando:`
+   [![Alt text](/img/python.png)](https://hub.docker.com/_/python/ "Python")
+
+   [![Alt text](/img/sqlachemy.png)](https://www.sqlalchemy.org/)
+
+   [![Alt text](/img/postogres.png)](https://www.postgresql.org "PostgreSQL")
+
+   [![Alt text](/img/SQLite.png)](https://www.sqlite.org/ "SQLite")
+
+   [![Alt text](/img/dbeaver.png)](https://dbeaver.io "DBeaver")
+
+---
+
+* ### Configurar o ambiente do python na ultima versão
+
+    utilizando o terminal digite o seguinte
+    📝 `comando:`
 
     ```bash
-    docker pull python
-    ````
+  -> docker pull python
+    ```
 
 * confirmar a versão instalada
 
      📝`comando:`
 
     ````bash
-    python --version
+
+  -> python --version
     ````
 
 * ✔️ Resposta:
 
-    ````txt
-
-      Python 3.11.0
+    ````bash
+  ->  Python 3.11.0
     ````
 
 * ###  Instalar os pacotes necessários para fazer a aula
 
-````bash
-    pip install --require-hashes -r requirements.txt
-````
+  ````bash
+  -> pip install --require-hashes -r requirements.txt
+  ````
 
-* ### Instalação do DBeaver para manipulação de banco de dados
+* create engine docker bd postgres
+  📝`comando:`
 
-[![Alt text](/img/Untitled-2.png)](https://dbeaver.io/download/)
-
+  ````bash
+  ->  docker-composer up -d
+  ````
 
 ---
 
-
-* ✅  **Sessão: 1- Apresentação** [PARTE -1](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Introdução_ao_SQL_Alchemy)
+* ✅  **Sessão: 1️⃣- Apresentação** [PARTE -1](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Introdução_ao_SQL_Alchemy)
 
 ---
  ✅ 1. Sobre o curso
@@ -57,9 +74,7 @@
 
 ---
 
-* ✅ **Sessão:2- Introdução ao SQL Alchemy** [PARTE -2](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy)
-
-    ![Alt text](/img/image_3.png)
+* ✅ **Sessão: 2️⃣ - Introdução ao SQL Alchemy** [PARTE -2](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy)
 
 ---
 
@@ -75,19 +90,13 @@
 
 ---
 
-* ✅ **Sessão:3- Modelagem de Dados com SQLAlchemy** [PARTE -3](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy)
+* ✅ **Sessão: 3️⃣ - Modelagem de Dados com SQLAlchemy** [PARTE -3](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy)
 
 ---
 
 ✅ 8. O que vamos aprender nesta seção?
 
 ![image](https://user-images.githubusercontent.com/16502108/203575271-44ae4b7f-a433-466c-8f4a-11e39ea63397.png)
-
-* create engine docker bd postgres
-
-````bash
-    docker-composer up -d
-````
 
 ✅ 9.  Prática: Criando a Estrutura do Projeto - **Parte 1**
 
@@ -105,7 +114,7 @@
 
 ---
 
-* 🔲**Sessão:4-Manipulando Dados com SQLAlchemy**
+* 🔲**Sessão: 4️⃣  -Manipulando Dados com SQLAlchemy**
 
 ---
 
@@ -127,7 +136,7 @@
 
 ---
 
-* 🔲**Sessão:5- SQLAlchemy Assíncrono**
+* 🔲**Sessão: 5️⃣ - SQLAlchemy Assíncrono**
 
 ---
 
@@ -145,7 +154,7 @@
 
 ---
 
-* 🔲**Sessão:6- (Extra) SQL Model**
+* 🔲**Sessão: 6️⃣ - (Extra) SQL Model**
 
 ---
 
@@ -165,7 +174,7 @@
 
 ---
 
-* 🔲**Sessão:7- (Extra) SQL Model Assíncrono**
+* 🔲**Sessão: 7️⃣ - (Extra) SQL Model Assíncrono**
 
 ---
 
@@ -182,7 +191,7 @@
 
 ---
 
-* 🔲**Sessão:8- Encerramento**
+* 🔲**Sessão: 8️⃣ - Encerramento**
 
 ---
 
