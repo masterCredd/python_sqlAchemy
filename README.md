@@ -114,7 +114,7 @@
 
 ---
 
-* 🔲**Sessão: 4️⃣  -Manipulando Dados com SQLAlchemy**
+* 🔲**Sessão: 4️⃣  - Manipulando Dados com SQLAlchemy**
 
 ---
 
