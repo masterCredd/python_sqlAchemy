@@ -25,10 +25,9 @@ class AditivoNutritivo(ModelBase):
         unique=True,
         nullable=False
     )
-    
+
     formula_quimica = Column(
         String(45),
-        unique=True,
         nullable=False
     )
 

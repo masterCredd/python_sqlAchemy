@@ -110,7 +110,7 @@
 
 ✅ 14. Prática: Criando as tabelas no banco de dados
 
-![image](/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy/gusqla/03_sqla_sync/db/picoles.sqlite.png)
+![image](/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy/gusqla/03_sqla_sync/picoles.sqlite.png)
 
 ✅ 15. Recapturando
 
