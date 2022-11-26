@@ -1,5 +1,4 @@
-from venv import create
-from sqlalchemy import insert
+
 from conf.db_session import craete_session
 from model.aditivo_nutritivo import AditivoNutritivo
 
@@ -20,10 +19,8 @@ def insert_aditivo_nutritivo():
     an =AditivoNutritivo(nome=nome,formula_quimita=formula_quimita)
 
     with craete_session() as session:
-        try:
             session.add(an)
             session.commit()
-        except:
             print('Erro de inserção de dados')
 
     print('Aditivo Nutritivo cadastrado com sucesso!')
@@ -31,3 +28,6 @@ def insert_aditivo_nutritivo():
     print(f'Data de Criação: {an.data_criacao}')
     print(f'Nome: {an.nome}')
     print(f'Formula Quimica: {an.formula_quimica}')
+
+if __name__=="__main__":
+    insert_aditivo_nutritivo()

@@ -96,7 +96,7 @@
 
 ✅ 8. O que vamos aprender nesta seção?
 
-![image](https://user-images.githubusercontent.com/16502108/203575271-44ae4b7f-a433-466c-8f4a-11e39ea63397.png)
+![image](/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy/01.2+-+fabrica_picoles_ordenado.png "Diagrama Ilustrativo")
 
 ✅ 9.  Prática: Criando a Estrutura do Projeto - **Parte 1**
 
@@ -109,6 +109,8 @@
 ✅ 13. Prática: Criando a Models - **Parte 3**
 
 ✅ 14. Prática: Criando as tabelas no banco de dados
+
+![image](/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy/gusqla/03_sqla_sync/db/picoles.sqlite.png)
 
 ✅ 15. Recapturando
 
