@@ -1,16 +1,15 @@
 
-import re
 from conf.db_session import craete_session
 from model.aditivo_nutritivo import AditivoNutritivo
-from model.tipo_embalagem import TipoEmbalagem
-from model.tipo_picole import TipoPicole
-from model.ingrediente import Ingrediente
 from model.conservante import Conservante
+from model.ingrediente import Ingrediente
+from model.lote import Lote
+from model.nota_fiscal import NotaFiscal
+from model.picole import Picole
 from model.revendedor import Revendedor
 from model.sabor import Sabor
-
-
-
+from model.tipo_embalagem import TipoEmbalagem
+from model.tipo_picole import TipoPicole
 
 
 # 1-AditivoNutritivo
@@ -176,7 +175,7 @@ def insert_conservante():
     print(f'Nome: {conserv.nome}')
     print(f'Descrição:{conserv.descricao}')
 
-# 6- Revendedor
+# 7- Revendedor
 
 
 def insert_revendedor():
@@ -204,6 +203,83 @@ def insert_revendedor():
 
     return revend
 
+# 8- lote
+
+
+def insert_lote():
+    """
+        The insert_lote function inserts a new lote into the database.
+
+        :return: The object lt
+        :doc-author: Trelent
+    """
+
+    print('Cadastrando lote')
+
+
+    id_tp_picole= input('Informe o id do picole')
+
+    quantidade = input('Informe a quantidade do lote:')
+
+    lt = Lote(id_tipo_picole=id_tp_picole, quantidade=quantidade)
+
+    with craete_session() as session:
+        session.add(lt)
+        session.commit()
+
+    return lt
+
+
+# 9- nota fiscal
+
+
+def insert_nota_fiscal():
+    """
+        The insert_nota fiscal function inserts a new nota fiscal into the database.
+
+        :return: The object lt
+        :doc-author: Trelent
+    """
+
+    print('Cadastrando a nota fiscal')
+
+    valor = input('Informe o valor da Nota Fiscal')
+
+    num_serie = input('Informe numero de serie da Nota Fiscal:')
+
+    descricao= input('Informe a descrição da Nota Fiscal')
+
+    id_revd = input('Informe o código do Revendedor')
+
+    ntfisc = NotaFiscal(
+        valor=valor,
+        numero_serie=num_serie,
+        descricao=descricao,
+        id_revendedor=id_revd)
+
+    lt_01=insert_lote()
+    ntfisc.lotes.append(lt_01)
+
+    lt_02 = insert_lote()
+    ntfisc.lotes.append(lt_02)
+
+    revd=insert_revendedor()
+    id_revd=revd.id
+
+    with craete_session() as session:
+        session.add(ntfisc)
+        session.commit()
+
+    print('Nota Fiscal cadastrada com sucesso!')
+    print(f'ID: {ntfisc.id}')
+    print(f'Data: {ntfisc.data_criacao}')
+    print(f'Valor: {ntfisc.valor}')
+    print(f'Numero de Serie: {ntfisc.numero_serie}')
+    print(f'descrição: {ntfisc.descricao}')
+    print(f'ID do Revendedor: {ntfisc.id_revd}')
+    print(f'Revendedor: {ntfisc.revendedor.razao_social}')
+
+
 
 
 if __name__=="__main__":
@@ -230,3 +306,14 @@ if __name__=="__main__":
     print(f'CNPJ: {rev.cnpj}')
     print(f'Razão social: {rev.razao_social}')
     print(f'Contato: {rev.Contato}')
+
+    # 8
+    lti=insert_lote()
+    print(f'ID: {lti.id}')
+    print(f'Data de Criação: {lti.data_criacao}')
+    print(f'ID tipo de picole: {lti.id_tipo_picole}')
+    print(f'Razão social: {lti.quantidade}')
+    print(f'Contato: {rev.Contato}')
+
+    # 9
+    insert_nota_fiscal()

@@ -58,11 +58,11 @@ class NotaFiscal(ModelBase):
         nullable=False
     )
 
-    id_revendodor = Column(
+    id_revendedor = Column(
         Integer,
         ForeignKey('revendedor.id'),
     )
-    
+
     revendedor: Revendedor = relationship(
         'Revendedor',
         lazy='joined'
