@@ -124,7 +124,7 @@
 
 ✅ 17. Entendendo o Padrão Unit of Work [PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/Manipulando_Dados_com_SQL_Alchemy/02-entendendo-o-padrao-unit-of-work.pdf)
 
-* 🔲 18. Prática: Inserindo Dados - Create(`Insert`) - **Parte 1**
+✅  18. Prática: Inserindo Dados - Create(`Insert`) - **Parte 1**
 
 * 🔲 19. Prática: Inserindo Dados - Create(`Insert`) - **Parte 2**
 

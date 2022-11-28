@@ -30,7 +30,7 @@ class Revendedor(ModelBase):
         String(100),
         nullable=False
     )
-    
+
     contato = Column(
         String(100),
         nullable=False
@@ -47,4 +47,4 @@ class Revendedor(ModelBase):
         :return: The string representation of the object
         :doc-author: Trelent
         """
-        return f'<Revendedor: {self.nome}>'
+        return f'<Revendedor: {self.cnpj}>'
