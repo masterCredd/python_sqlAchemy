@@ -121,7 +121,7 @@ class Picole(ModelBase):
 
     # conservantes: Optional[List[Conservantes]]
     # conservantes
-    conservantes: Optional[List[Conservante]] = relationship(
+    conservantes: List[Conservante] = relationship(
         'Conservante',
         secondary=conservantes_picole,
         backref='conservante',
@@ -129,7 +129,7 @@ class Picole(ModelBase):
     )
 
     # aditivos_nutritivos: Optional[List[AditivosNutritivos]]
-    aditivos_nutritivos: Optional[List[AditivoNutritivo]] = relationship(
+    aditivos_nutritivos: List[AditivoNutritivo] = relationship(
         'AditivoNutritivo',
         secondary=aditivos_nutritivos_picole,
         backref='aditivo_nutritivo',

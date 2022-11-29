@@ -34,11 +34,16 @@ def insert_aditivo_nutritivo():
             session.commit()
 
 
-    print('Aditivo Nutritivo cadastrado com sucesso!')
-    print(f'ID: {an.id}')
-    print(f'Data de Criação: {an.data_criacao}')
-    print(f'Nome: {an.nome}')
-    print(f'Formula Quimica: {an.formula_quimica}')
+    # print('Aditivo Nutritivo cadastrado com sucesso!')
+    # print(f'ID: {an.id}')
+    # print(f'Data de Criação: {an.data_criacao}')
+    # print(f'Nome: {an.nome}')
+    # print(f'Formula Quimica: {an.formula_quimica}')
+    return an
+
+
+
+
 
 # 2- Sabor
 def insert_sabor():
@@ -140,10 +145,12 @@ def insert_ingrediente():
         session.add(ingred)
         session.commit()
 
-    print('Ingrediente cadastrado com sucesso!')
-    print(f'ID: {ingred.id}')
-    print(f'Data de Criação: {ingred.data_criacao}')
-    print(f'Nome: {ingred.nome}')
+    # print('Ingrediente cadastrado com sucesso!')
+    # print(f'ID: {ingred.id}')
+    # print(f'Data de Criação: {ingred.data_criacao}')
+    # print(f'Nome: {ingred.nome}')
+
+    return ingred
 
 # 6- Conservante
 
@@ -169,11 +176,13 @@ def insert_conservante():
         session.add(conserv)
         session.commit()
 
-    print('Conservante cadastrado com sucesso!')
-    print(f'ID: {conserv.id}')
-    print(f'Data de Criação: {conserv.data_criacao}')
-    print(f'Nome: {conserv.nome}')
-    print(f'Descrição:{conserv.descricao}')
+    # print('Conservante cadastrado com sucesso!')
+    # print(f'ID: {conserv.id}')
+    # print(f'Data de Criação: {conserv.data_criacao}')
+    # print(f'Nome: {conserv.nome}')
+    # print(f'Descrição:{conserv.descricao}')
+
+    return conserv
 
 # 7- Revendedor
 
@@ -280,6 +289,70 @@ def insert_nota_fiscal():
     print(f'Revendedor: {ntfisc.revendedor.razao_social}')
 
 
+# 10- picole
+
+
+def insert_picole():
+    """
+        The insert_picole function inserts a new picole into the database.
+
+        :return: The object lt
+        :doc-author: Trelent
+    """
+
+    print('Cadastrando o picole')
+
+    preco = input('Informe o preço do Picole:')
+
+    tp_embalagem=input('Informe o ID do Tipo da Embalagem:')
+
+    sab = input('Informe o ID do Sabor :')
+
+    tp_picole = input('Informe o ID do Tipo de Picole:')
+
+    id_revd = input('Informe o código do Revendedor')
+
+    picole = Picole(
+        id_sabor=sab,
+        id_tipo_embalagem=tp_embalagem,
+        id_tipo_picole=tp_picole,
+        preco=preco
+    )
+
+    ingred_01=insert_ingrediente()
+    picole.ingredientes.append(ingred_01)
+
+    ingred_02 = insert_ingrediente()
+    picole.ingredientes.append(ingred_02)
+
+
+
+    conprov_01=insert_conservante()
+
+    picole.conservantes.append(conprov_01)
+
+    nutri_01=insert_aditivo_nutritivo()
+    picole.aditivos_nutritivos.append(nutri_01)
+
+
+
+    with craete_session() as session:
+        session.add(picole)
+        session.commit()
+
+    print('Picole cadastrada com sucesso!')
+    print(f'ID: {picole.id}')
+    print(f'Data: {picole.data_criacao}')
+    print(f'Preço: {picole.preco}')
+    print(f'Sabor: {picole.sabor.nome}')
+    print(f'Tipo Picole: {picole.tipo_picole.nome}')
+    print(f'Tipo Embalagem: {picole.tipo_embalagem.nome}')
+    print(f'Ingredientes: {picole.ingredientes}')
+    print(f'Conservantes: {picole.conservantes}')
+    print(f'Aditivos Nutritivos : {picole.aditivos_nutritivos}')
+
+
+
 
 
 if __name__=="__main__":
@@ -317,3 +390,6 @@ if __name__=="__main__":
 
     # 9
     insert_nota_fiscal()
+
+    # 10
+    insert_picole()
