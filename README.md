@@ -8,9 +8,11 @@
 ---
 🔜  **[Tecnologias usadas no curso]**
 
- ⟹   [![texto alt](/img/docker.png)](https://www.docker.com/products/docker-desktop/ "Docker")
+⟹    [![Alt text](/img/terminal.png)](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=pt-br&gl=br "Terminal Windows")
 
- ⟹   [![Alt text](/img/visual_studio_code.png)](https://hub.docker.com/_/python/ "Visual Studio Code")
+⟹    [![Alt text](/img/visual_studio_code.png)](https://hub.docker.com/_/python/ "Visual Studio Code")
+
+ ⟹   [![texto alt](/img/docker.png)](https://www.docker.com/products/docker-desktop/ "Docker")
 
 ⟹    [![Alt text](/img/python.png)](https://hub.docker.com/_/python/ "Python")
 
