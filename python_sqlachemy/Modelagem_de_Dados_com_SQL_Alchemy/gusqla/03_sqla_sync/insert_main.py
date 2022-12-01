@@ -353,9 +353,14 @@ def insert_picole():
 
 
 
+def inserir_dados():
+    """
+    The inserir_dados function inserts data into the database.
 
 
-if __name__=="__main__":
+    :return: :
+    :doc-author: Trelent
+    """
     # 1
     insert_aditivo_nutritivo()
     # 2
@@ -363,7 +368,7 @@ if __name__=="__main__":
     # 3
     insert_tipo_embalagem()
 
-    #4
+    # 4
     insert_tipo_picole()
 
     # 5
@@ -373,7 +378,7 @@ if __name__=="__main__":
     insert_conservante()
 
     # 7
-    rev= insert_revendedor()
+    rev = insert_revendedor()
     print(f'ID: {rev.id}')
     print(f'Data de Criação: {rev.data_criacao}')
     print(f'CNPJ: {rev.cnpj}')
@@ -381,7 +386,7 @@ if __name__=="__main__":
     print(f'Contato: {rev.Contato}')
 
     # 8
-    lti=insert_lote()
+    lti = insert_lote()
     print(f'ID: {lti.id}')
     print(f'Data de Criação: {lti.data_criacao}')
     print(f'ID tipo de picole: {lti.id_tipo_picole}')
@@ -393,3 +398,9 @@ if __name__=="__main__":
 
     # 10
     insert_picole()
+
+
+
+
+if __name__=="__main__":
+    inserir_dados()

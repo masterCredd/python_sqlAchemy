@@ -59,7 +59,7 @@ def createEngine(sql: bool = False):
     return __engine
 
 
-def craete_session():
+def create_session():
     """
         The craete_session function creates a new SQLAlchemy session.
         It is used to create a singleton instance of the Session class, which can be reused by multiple classes.
