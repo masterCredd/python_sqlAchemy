@@ -1,6 +1,6 @@
 from time import sleep
 
-from conf.db_session import create_session
+from db_session import create_session
 from helpers import gerar_cor, gerar_float, gerar_int, gerar_string
 from model.aditivo_nutritivo import AditivoNutritivo
 from model.conservante import Conservante

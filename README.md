@@ -128,7 +128,8 @@
 
 ✅  19. Prática: Inserindo Dados - Create(`Insert`) - **Parte 2**
 
-* 🔲 20. Prática: Zerando e Populando o Banco de Dados
+✅  20. Prática: Zerando e Populando o Banco de Dados
+
 * 🔲 21. Prática: Buscando Dados - Read(`Select`) - **Parte 1**
 * 🔲 22. Prática: Buscando Dados - Read(`Select`) - **Parte 2**
 * 🔲 23. Compreendendo melhor relacionamentos
