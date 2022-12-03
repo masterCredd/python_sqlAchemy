@@ -1,5 +1,12 @@
 
-### SQL Alchemy: Essencial _Curso  🍧
+# SQL Alchemy: Essencial _Curso  🍧
+
+---
+🔜 🎓  **Introduction**
+
+---
+
+  Explica se faz a utilização do framework em uma aplicação real
 
 ---
 
@@ -26,7 +33,7 @@
 
 ---
 
-* ### Configurar o ambiente do python na ultima versão
+## Configurar o ambiente do python na ultima versão
 
     utilizando o **terminal** digite o seguinte
     📝 `comando:`
@@ -109,11 +116,7 @@
 👉  **Exemplo para Criar uma Classe do Model**
 
   ```python
-  from datetime import datetime
-
-  from conf.db_session import ModelBase
-  from sqlalchemy import BigInteger, Column, DateTime, String
-
+  #🐍
 
   class Sabor(ModelBase):
 
@@ -183,6 +186,8 @@
 👉 **Exemplo de uma Função para selecionar todos os dados**
 
   ```python
+
+  #🐍
     def select_todos_aditivos_nutritivos():
       """
           The select_todos_aditivos_nutritivos
@@ -213,23 +218,173 @@
 
 * 🔲 23. Compreendendo melhor relacionamentos
 
+  ▶️  **Informações Adicionais**
+
 🔜  🎀 Classes Python oferecem relacionamentos entre outras passes,
       mas estamos falando neste caso de orientação à objetos.
       Em banco de dados relacionais, temos refacimentos um-para-muitos e
       desta forma conseguimos resolver qualquer problema de normalização de
       dados aplicando as formas normais.
 
+  👉 **Exemplo**
+
+  ```python
+
+  #🐍
+
+    class Pais(ModelBase);
+
+      __tablename__ = 'paises'
+
+      id = Column(
+        BigInteger,
+        primary_key=True,
+        autoincrement=True
+      )
+
+      nome = Column(
+        String(100),
+        index=100,
+        unique=True
+      )
+
+      cidades = List[Cidade]= relationship(
+        'Cidade',
+        back_populates='pais',
+        lazy=True
+      )
+      ...
+
+    class Cidade(ModelBase)
+
+      __tablename__ = 'cidades'
+
+      id = Column(
+        BigInteger,
+        primary_key=True,
+        autoincrement=True
+      )
+
+      nome = Column(
+        String(100),
+        index=100,
+        unique=True
+      )
+
+      id_pais = Column(
+        BigInteger,
+        Foreinkey('paises.id')
+      )
+
+      pais = relationship(
+        'Pais',
+        back_populates='cidades'
+      )
+      ....
+  ```
+
+  🔜  🎀 A pate importante aqui é o parâmetro `lazy`, que neste exemplo está o com valor True
+
+  🔜  🎀 Por padrão o parâmetro `lazy`, tem valor de `select`. Ou seja, mesmo que não especifiquemos este parâmetro, que é opcional, ele irá funcionar como `select`.
+  Mas o que este `select` faz?
+
+  🔜  🎀 O parâmetro `lazy`, determina como os objetos relacionados são "carregados" quando queridos pelos relacionamentos.
+
+  🔜  🎀 Temos 4 principais valores para o parâmetro `Lazy`:
+
+  📍 select(ou True);
+  📍 dynamic;
+  📍 joined(ou False);
+  📍 subquery;
+
+  🔜  🎀 Usando `Lazy` com o valor `'select'`(ou True)
+
+  👉 **Exemplo**
+
+  ```python
+
+  #🐍
+    ...
+      cidades = List[Cidade]= relationship(
+        'Cidade',
+        back_populates='pais',
+        lazy=True
+      )
+    ...
+  ```
+
+  🔜  🎀 Em relacionamento onde o campo relacionado faz uso de ``lazy='select'``, quando chamamos/carregamos o valor este emite/executa um comando ``SELECT`` trazendo todos os objetos relacionados.
+
+  🔜  🎀 Por exemplo, se quisermos, através da consulta a um país, buscar todas as cidades relacionadas podemos fazer: ``session.query(Pais).fist().cidades``
+  Desta forma teríamos uma lista de cidades deste país.
+
+  🔜  🎀 Usando ``Lazy`` com o valor ``'dynamic'``:
+
+  ```python
+
+  #🐍
+    ...
+      cidades = List[Cidade]= relationship(
+        'Cidade',
+        back_populates='pais',
+        lazy='dynamic'
+      )
+    ...
+  ```
+
+  🔜  🎀 Se realizarmos uma consulta igual a anterior mas de um model que possui um relacionamento usando ``lazy='dynamic'`` ao invés de termos uma lista de cidades, teríamos o comando ``Select`` por completo como saída, conforme: ``session.query(Pais).fist().cidades``
+
+  ```SQL
+  //⤵️
+     SELECT paises.id AS pais_id paises.nome AS pais_nome FROM paises;
+  ````
+
+  🔜  🎀  Ou seja, desta forma temos um objeto SQLAlchemy ao invés da lista de cidades
+
+  🔜  🎀 Porém, se executarmos a função ``all()``, ai sim teremos também nossa lista de cidades:
+
+```python
+...
+session.query(Pais).first()cidades.all()
+...
+```
+
+  🔜  🎀 O beneficio aqui é que podemos ir  além e adicionar filtros ou ordenar os dados conforme precisarmos.
+
+  🔜  🎀 Usando ``Lazy`` com o valor ``'joined'`` (ou False)
+
 ```python
 
-  class Pais(ModelBase);
-    __tablename__ ='paises'
+  #🐍
+    ...
+      cidades = List[Cidade]= relationship(
+        'Cidade',
+        back_populates='pais',
+        lazy='joined'
+      )
+    ...
+  ```
 
-    id =
+  🔜  🎀 Usando  ``lazy='joined'``, automaticamente é feito um join entre as duas tabelas e o resultado é retornado.
 
+🔜  🎀 Usando ``Lazy`` com o valor ``'subquery'``
 
+```python
 
+  #🐍
+    ...
+      cidades = List[Cidade]= relationship(
+        'Cidade',
+        back_populates='pais',
+        lazy='subquery'
+      )
+    ...
+  ```
 
-```
+  🔜  🎀 Usando ``lazy='subquery'``, basicamente temos o mesmo resultado, exceto pelo fato de que subquery faz uso de subquery (Select dentro do select), enquanto joined faz uso de join.
+
+  🔜  🎀 Mas por
+
 
 * 🔲 24. Prática: Atualizando Dados - `Update`
 * 🔲 25. Prática: Deletando Dados  - `Delete`
