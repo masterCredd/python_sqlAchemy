@@ -65,7 +65,7 @@
 
 ---
 
-* ✅  **Sessão: 1️⃣ - Apresentação** [PARTE -1](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Introdução_ao_SQL_Alchemy)
+🔜  ✅  **Sessão: 1️⃣ - Apresentação** [PARTE -1](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Introdução_ao_SQL_Alchemy)
 
 ---
  ✅ 1. Sobre o curso
@@ -76,7 +76,7 @@
 
 ---
 
-* ✅ **Sessão: 2️⃣ - Introdução ao SQL Alchemy** [PARTE -2](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy)
+🔜  ✅ **Sessão: 2️⃣ - Introdução ao SQL Alchemy** [PARTE -2](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy)
 
 ---
 
@@ -92,7 +92,7 @@
 
 ---
 
-* ✅ **Sessão: 3️⃣ - Modelagem de Dados com SQLAlchemy** [PARTE -3](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy)
+🔜   ✅ **Sessão: 3️⃣ - Modelagem de Dados com SQLAlchemy** [PARTE -3](https://github.com/masterCredd/python_sqlAchemy/tree/master/python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy)
 
 ---
 
@@ -118,7 +118,7 @@
 
 ---
 
-* 🔲**Sessão: 4️⃣  - Manipulando Dados com SQLAlchemy**
+🔜 🔲**Sessão: 4️⃣  - Manipulando Dados com SQLAlchemy**
 
 ---
 
@@ -132,8 +132,14 @@
 
 ✅  20. Prática: Zerando e Populando o Banco de Dados
 
-* 🔲 21. Prática: Buscando Dados - Read(`Select`) - **Parte 1**
+✅  21. Prática: Buscando Dados - Read(`Select`) - **Parte 1**
+
 * 🔲 22. Prática: Buscando Dados - Read(`Select`) - **Parte 2**
+
+ 👉  **SQL Equivalents**
+
+![image](/img/forma_de_filtros.png)
+
 * 🔲 23. Compreendendo melhor relacionamentos
 * 🔲 24. Prática: Atualizando Dados - `Update`
 * 🔲 25. Prática: Deletando Dados  - `Delete`
@@ -141,7 +147,7 @@
 
 ---
 
-* 🔲**Sessão: 5️⃣ - SQLAlchemy Assíncrono**
+🔜 🔲**Sessão: 5️⃣ - SQLAlchemy Assíncrono**
 
 ---
 
@@ -159,7 +165,7 @@
 
 ---
 
-* 🔲**Sessão: 6️⃣ - (Extra) SQL Model**
+🔜 🔲**Sessão: 6️⃣ - (Extra) SQL Model**
 
 ---
 
@@ -179,7 +185,7 @@
 
 ---
 
-* 🔲**Sessão: 7️⃣ - (Extra) SQL Model Assíncrono**
+🔜 🔲**Sessão: 7️⃣ - (Extra) SQL Model Assíncrono**
 
 ---
 
@@ -196,7 +202,7 @@
 
 ---
 
-* 🔲**Sessão: 8️⃣ - Encerramento**
+🔜 🔲**Sessão: 8️⃣ - Encerramento**
 
 ---
 
