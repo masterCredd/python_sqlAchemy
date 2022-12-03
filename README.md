@@ -212,6 +212,25 @@
 ![image](/img/forma_de_filtros.png)
 
 * 🔲 23. Compreendendo melhor relacionamentos
+
+🔜  🎀 Classes Python oferecem relacionamentos entre outras passes,
+      mas estamos falando neste caso de orientação à objetos.
+      Em banco de dados relacionais, temos refacimentos um-para-muitos e
+      desta forma conseguimos resolver qualquer problema de normalização de
+      dados aplicando as formas normais.
+
+```python
+
+  class Pais(ModelBase);
+    __tablename__ ='paises'
+
+    id =
+
+
+
+
+```
+
 * 🔲 24. Prática: Atualizando Dados - `Update`
 * 🔲 25. Prática: Deletando Dados  - `Delete`
 * 🔲 26. Recapturando

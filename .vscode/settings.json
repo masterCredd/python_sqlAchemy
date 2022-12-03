@@ -4,12 +4,14 @@
         "criacao",
         "GRUP",
         "nullable",
+        "paises",
         "picole",
         "picoles",
         "postgresql",
         "quimica",
         "sessionmaker",
-        "sqlite"
+        "sqlite",
+        "tablename"
     ],
     "python.analysis.extraPaths": [
         "./python_sqlachemy/Modelagem_de_Dados_com_SQL_Alchemy/gusqla/03_sqla_sync"
