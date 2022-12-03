@@ -216,7 +216,7 @@
 
 ![image](/img/forma_de_filtros.png)
 
-* 🔲 23. Compreendendo melhor relacionamentos
+✅ 23. Compreendendo melhor relacionamentos
 
   ▶️  **Informações Adicionais**
 
@@ -231,7 +231,7 @@
   ```python
 
   #🐍
-
+    ...
     class Pais(ModelBase);
 
       __tablename__ = 'paises'
@@ -280,7 +280,7 @@
         'Pais',
         back_populates='cidades'
       )
-      ....
+    ...
   ```
 
   🔜  🎀 A pate importante aqui é o parâmetro `lazy`, que neste exemplo está o com valor True
@@ -383,8 +383,7 @@ session.query(Pais).first()cidades.all()
 
   🔜  🎀 Usando ``lazy='subquery'``, basicamente temos o mesmo resultado, exceto pelo fato de que subquery faz uso de subquery (Select dentro do select), enquanto joined faz uso de join.
 
-  🔜  🎀 Mas por
-
+  🔜  🎀 Mas por estarem em tabelas diferentes, o join sempre irá performar melhor.
 
 * 🔲 24. Prática: Atualizando Dados - `Update`
 * 🔲 25. Prática: Deletando Dados  - `Delete`

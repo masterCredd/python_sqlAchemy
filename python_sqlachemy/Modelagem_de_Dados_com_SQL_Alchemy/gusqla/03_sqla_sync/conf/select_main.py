@@ -170,6 +170,13 @@ def select_count_itens_revendedores():
 
 # 8 SELECT MAX, MIN, AVG, SUM,
 def select_agregation():
+    """
+        The select_agregation function is used to select the sum, average, minimum and maximum of a given column.
+        It receives no arguments and returns nothing.
+
+        :return: A list of tuples with the sum, average, minimum and maximum
+        :doc-author: Trelent
+    """
     with create_session() as session:
         result = session.query(
             func.sum(Picole.preco).label('Soma: '),
