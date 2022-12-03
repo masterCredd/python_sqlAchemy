@@ -8,7 +8,6 @@ from model.revendedor import Revendedor
 from model.picole import Picole
 
 
-
 # 1  --> SELECT * FROM aditivos_nutritivos;
 def select_todos_aditivos_nutritivos():
     """
@@ -20,10 +19,9 @@ def select_todos_aditivos_nutritivos():
     """
     with create_session() as session:
         # tipo 1
-        adnv=session.query(AditivoNutritivo)
+        adnv = session.query(AditivoNutritivo)
         # tipo 2
-        adv2=session.query(AditivoNutritivo).all()
-
+        adv2 = session.query(AditivoNutritivo).all()
 
         for adn in adnv:
             print(f'ID: {adn.id} ')
@@ -33,7 +31,7 @@ def select_todos_aditivos_nutritivos():
 
 
 # 2 --> SELECT * FROM sabores WHERE sabores.id==id_sabor
-def select_filter_sabor(id_sabor:int):
+def select_filter_sabor(id_sabor: int):
     """
         The select_filter_sabor function accepts an id_sabor parameter and returns the Sabor object with that id. If no sabor has that ID, it returns None.
 
@@ -55,13 +53,12 @@ def select_filter_sabor(id_sabor:int):
         # tipo 4 first -> one_or_one -> one
         # sb_1 = session.query(Sabor).where(Sabor.id == id_sabor).one()
 
-        if sb_1==None:
+        if sb_1 == None:
             print('o Sabor procurado não existe!')
         else:
             print(f'ID: {sb_1.id}')
             print(f'Data de Criação: {formata_data(sb_1.data_criacao)}')
             print(f'Nome: {sb_1.nome}')
-
 
 
 # 3 --> SELECT * FROM picole
@@ -74,7 +71,7 @@ def setelec_complexo_picole():
         :doc-author: Trelent
     """
     with create_session() as session:
-        pcl=session.query(Picole).all()
+        pcl = session.query(Picole).all()
 
         for pc in pcl:
             print(f'ID: {pc.id}')
@@ -113,7 +110,8 @@ def select_ordem_sabor():
         :doc-author: Trelent
     """
     with create_session() as session:
-        sb_or_b=session.query(Sabor).order_by(Sabor.data_criacao.desc()).all()
+        sb_or_b = session.query(Sabor).order_by(
+            Sabor.data_criacao.desc()).all()
 
         for sb_or in sb_or_b:
             print(f'ID: {sb_or.id}')
@@ -121,9 +119,72 @@ def select_ordem_sabor():
             print(f'Nome: {sb_or.nome}')
 
 
+# 5 --> SELECT  * FROM picole GRUP BY picole.id and picole.id_tipo_picole
+def select_grup_picole():
+    """
+        The select_grup_picole function selects all the picoles from the database and prints them grouped by id
+
+        :return: A list of objects that are picoles
+        :doc-author: Trelent
+    """
+    with create_session() as session:
+
+        picl = session.query(Picole).group_by(
+            Picole.id,
+            Picole.id_tipo_picole
+        ).all()
+
+        for p in picl:
+            print(f'ID: {p.id}')
+            print(f'Tipo Picole: {p.tipo_picole.nome}')
+            print(f'sabor: {p.sabor.nome}')
+            print(f'Preço: R$  {p.preco}')
+
+# 6 --> SELECT * FROM sabores LIMIT 25
 
 
-if __name__=="__main__":
+def select_limit_sabor():
+    with create_session() as session:
+        sbr = session.query(Sabor).limit(25)
+
+        for s in sbr:
+            print(f'ID: {s.id}')
+            print(f'Data de Criação: {formata_data(s.data_criacao)}')
+            print(f'Nome: {s.nome}')
+
+
+# 7 SELECT count FROM revendedores
+
+def select_count_itens_revendedores():
+    """
+        The select_count_itens_revendedores function counts the number of items in the Revendedor table.
+
+        :return: The amount of items sold by each revendedor
+        :doc-author: Trelent
+    """
+    with create_session() as session:
+        revd = session.query(Revendedor).count()
+
+        print(f'Quantidade de Revendedores: {revd}')
+
+
+# 8 SELECT MAX, MIN, AVG, SUM,
+def select_agregation():
+    with create_session() as session:
+        result = session.query(
+            func.sum(Picole.preco).label('Soma: '),
+            func.avg(Picole.preco).label('Media: '),
+            func.min(Picole.preco).label('Mínimo: '),
+            func.max(Picole.preco).label('Máximo: ')
+        ).all()
+
+        print(f'Soma: {result[0][0]}')
+        print(f'Media:  {range(result[0][1],2)}')
+        print(f'Mínimo: {result[0][2]}')
+        print(f'Máximo: {result[0][3]}')
+
+
+if __name__ == "__main__":
     # 1
     select_todos_aditivos_nutritivos()
 
@@ -135,3 +196,15 @@ if __name__=="__main__":
 
     # 4
     select_ordem_sabor()
+
+    # 5
+    select_grup_picole()
+
+    # 6
+    select_limit_sabor()
+
+    # 7
+    select_count_itens_revendedores()
+
+    # 8
+    select_agregation()

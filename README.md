@@ -10,7 +10,7 @@
 
 ⟹    [![Alt text](/img/terminal.png)](https://apps.microsoft.com/store/detail/windows-terminal/9N0DX20HK701?hl=pt-br&gl=br "Terminal Windows")
 
-⟹    [![Alt text](/img/visual_studio_code.png)](https://hub.docker.com/_/python/ "Visual Studio Code")
+⟹    [![Alt text](/img/visual_studio_code.png)](https://code.visualstudio.com/ "Visual Studio Code")
 
  ⟹   [![texto alt](/img/docker.png)](https://www.docker.com/products/docker-desktop/ "Docker")
 
@@ -106,6 +106,52 @@
 
 ✅ 11. Prática: Criando a Models - **Parte 1**
 
+👉  **Exemplo para Criar uma Classe do Model**
+
+  ```python
+  from datetime import datetime
+
+  from conf.db_session import ModelBase
+  from sqlalchemy import BigInteger, Column, DateTime, String
+
+
+  class Sabor(ModelBase):
+
+      __tablename__ = 'sabores'
+
+      id = Column(
+          BigInteger,
+          primary_key=True,
+          autoincrement=True
+      )
+
+      data_criacao = Column(
+          DateTime,
+          default=datetime.now,
+          index=True
+      )
+
+      nome = Column(
+          String(45),
+          unique=True,
+          nullable=False
+      )
+
+      def __repr__(self) -> str:
+          """
+          The __repr__ function is what defines the string representation of the object.
+          It's called by default when a string
+          representation of the object is needed, such as
+          when it gets passed to print(). It should always return a string.
+
+          :param self: Refer to the object itself
+          :return: The string representation of the object
+          :doc-author: Trelent
+          """
+          return f'<Sabores: {self.nome}>'
+
+  ```
+
 ✅ 12. Prática: Criando a Models - **Parte 2**
 
 ✅ 13. Prática: Criando a Models - **Parte 3**
@@ -134,7 +180,32 @@
 
 ✅  21. Prática: Buscando Dados - Read(`Select`) - **Parte 1**
 
-* 🔲 22. Prática: Buscando Dados - Read(`Select`) - **Parte 2**
+👉 **Exemplo de uma Função para selecionar todos os dados**
+
+  ```python
+    def select_todos_aditivos_nutritivos():
+      """
+          The select_todos_aditivos_nutritivos
+          function prints out all of the aditivos_nutritivos in the database.
+
+          :return: A list of objects containing all the aditivonutritivo
+          :doc-author: Trelent
+      """
+      with create_session() as session:
+          # tipo 1
+          adnv=session.query(AditivoNutritivo)
+          # tipo 2
+          adv2=session.query(AditivoNutritivo).all()
+
+
+          for adn in adnv:
+              print(f'ID: {adn.id} ')
+              print(f'Data de Criação: {formata_data(adn.data_criacao)} ')
+              print(f'Nome: {adn.nome} ')
+              print(f'Formula Quimica: {adn.formula_quimica} ')
+  ```
+
+✅ 22. Prática: Buscando Dados - Read(`Select`) - **Parte 2**
 
  👉  **SQL Equivalents**
 
