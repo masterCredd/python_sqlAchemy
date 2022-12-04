@@ -47,14 +47,15 @@ def createEngine(sql: bool = False):
             connect_args={"check_same_thread": False}
         )
     else:
-        #Postgres
-        
+        # Postgres
+        ...
 
 
 def create_session():
     """
         The craete_session function creates a new SQLAlchemy session.
-        It is used to create a singleton instance of the Session class, which can be reused by multiple classes.
+        It is used to create a singleton instance of the Session class,
+        which can be reused by multiple classes.
         The function takes no arguments and returns an instance of the Session class.
 
         :return: A session object that is bound to the engine
