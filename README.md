@@ -404,9 +404,12 @@ session.query(Pais).first()cidades.all()
 
 ---
 
-* 🔲 27. O que vamos aprender nesta seção?
-* 🔲 28. Revisando a Programação Assíncrona [PDF](python_sqlachemy/SQLAlchemy_Assíncrono/02-revisando-a-programacao-sincrona-e-assincrona.pdf)
-* 🔲 29. Prática: Refaturando o Projeto
+✅ 27. O que vamos aprender nesta seção?
+
+✅28. Revisando a Programação Assíncrona [PDF](https://github.com/masterCredd/python_sqlAchemy/blob/master/python_sqlachemy/SQLAlchemy_Assíncrono/02-revisando-a-programacao-sincrona-e-assincrona.pdf)
+
+✅29. Prática: Refaturando o Projeto
+
 * 🔲 30. Prática: Refatorando o arquivo db_session.py
 * 🔲 31. Prática: Refatorando o Insert
 * 🔲 32. Prática: Refatorando Zerar a Base e Popular
