@@ -285,7 +285,8 @@
 
   🔜  🎀 A pate importante aqui é o parâmetro `lazy`, que neste exemplo está o com valor True
 
-  🔜  🎀 Por padrão o parâmetro `lazy`, tem valor de `select`. Ou seja, mesmo que não especifiquemos este parâmetro, que é opcional, ele irá funcionar como `select`.
+  🔜  🎀 Por padrão o parâmetro `lazy`,
+  tem valor de `select`. Ou seja, mesmo que não especifiquemos este parâmetro, que é opcional, ele irá funcionar como `select`.
   Mas o que este `select` faz?
 
   🔜  🎀 O parâmetro `lazy`, determina como os objetos relacionados são "carregados" quando queridos pelos relacionamentos.
@@ -313,10 +314,12 @@
     ...
   ```
 
-  🔜  🎀 Em relacionamento onde o campo relacionado faz uso de ``lazy='select'``, quando chamamos/carregamos o valor este emite/executa um comando ``SELECT`` trazendo todos os objetos relacionados.
+  🔜  🎀 Em relacionamento onde o campo relacionado faz uso de ``lazy='select'``,
+  quando chamamos/carregamos o valor este emite/executa um comando ``SELECT`` trazendo todos os objetos relacionados.
 
-  🔜  🎀 Por exemplo, se quisermos, através da consulta a um país, buscar todas as cidades relacionadas podemos fazer: ``session.query(Pais).fist().cidades``
-  Desta forma teríamos uma lista de cidades deste país.
+  🔜  🎀 Por exemplo, se quisermos, através da consulta a um país,
+    buscar todas as cidades relacionadas podemos fazer: ``session.query(Pais).fist().cidades``
+    Desta forma teríamos uma lista de cidades deste país.
 
   🔜  🎀 Usando ``Lazy`` com o valor ``'dynamic'``:
 
@@ -332,7 +335,9 @@
     ...
   ```
 
-  🔜  🎀 Se realizarmos uma consulta igual a anterior mas de um model que possui um relacionamento usando ``lazy='dynamic'`` ao invés de termos uma lista de cidades, teríamos o comando ``Select`` por completo como saída, conforme: ``session.query(Pais).fist().cidades``
+  🔜  🎀 Se realizarmos uma consulta igual a anterior mas de um model que possui
+  um relacionamento usando ``lazy='dynamic'`` ao invés de termos uma lista de cidades,
+  teríamos o comando ``Select`` por completo como saída, conforme: ``session.query(Pais).fist().cidades``
 
   ```SQL
   //⤵️
@@ -381,11 +386,13 @@ session.query(Pais).first()cidades.all()
     ...
   ```
 
-  🔜  🎀 Usando ``lazy='subquery'``, basicamente temos o mesmo resultado, exceto pelo fato de que subquery faz uso de subquery (Select dentro do select), enquanto joined faz uso de join.
+  🔜  🎀 Usando ``lazy='subquery'``, basicamente temos o mesmo resultado,
+  exceto pelo fato de que subquery faz uso de subquery (Select dentro do select), enquanto joined faz uso de join.
 
   🔜  🎀 Mas por estarem em tabelas diferentes, o join sempre irá performar melhor.
 
-* 🔲 24. Prática: Atualizando Dados - `Update`
+✅ 24. Prática: Atualizando Dados - `Update`
+
 * 🔲 25. Prática: Deletando Dados  - `Delete`
 * 🔲 26. Recapturando
 
