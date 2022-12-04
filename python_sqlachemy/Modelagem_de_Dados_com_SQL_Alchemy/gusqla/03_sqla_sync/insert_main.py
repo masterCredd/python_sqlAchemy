@@ -15,11 +15,11 @@ from model.tipo_picole import TipoPicole
 # 1-AditivoNutritivo
 def insert_aditivo_nutritivo():
     """
-    The insert_aditivo_nutritivo function inserts a new Aditivo Nutritivo into the database.
-    It requires no input and returns nothing.
+        The insert_aditivo_nutritivo function inserts a new Aditivo Nutritivo into the database.
+        It requires no input and returns nothing.
 
-    :return: :
-    :doc-author: Trelent
+        :return: :
+        :doc-author: Trelent
     """
     print('Cadastrando Aditivo Nutritivo')
 
@@ -74,11 +74,11 @@ def insert_sabor():
 # 3- tipo de embalagem
 def insert_tipo_embalagem():
     """
-    The insert_tipo_embalagem function inserts a new tipo_embalagem into the database.
+        The insert_tipo_embalagem function inserts a new tipo_embalagem into the database.
 
 
-    :return: The id of the inserted item
-    :doc-author: Trelent
+        :return: The id of the inserted item
+        :doc-author: Trelent
     """
 
     print('Cadastrando Tipo de Embalagem')
@@ -355,12 +355,12 @@ def insert_picole():
 
 def inserir_dados():
     """
-    The inserir_dados function inserts data into the database.
+        The inserir_dados function inserts data into the database.
 
 
-    :return: :
-    :doc-author: Trelent
-    """
+        :return: :
+        :doc-author: Trelent
+        """
     # 1
     insert_aditivo_nutritivo()
     # 2

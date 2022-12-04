@@ -167,7 +167,7 @@
 
 ---
 
-🔜 🔲**Sessão: 4️⃣  - Manipulando Dados com SQLAlchemy**
+🔜 ✅**Sessão: 4️⃣  - Manipulando Dados com SQLAlchemy**
 
 ---
 
@@ -387,14 +387,16 @@ session.query(Pais).first()cidades.all()
   ```
 
   🔜  🎀 Usando ``lazy='subquery'``, basicamente temos o mesmo resultado,
-  exceto pelo fato de que subquery faz uso de subquery (Select dentro do select), enquanto joined faz uso de join.
+  exceto pelo fato de que subquery faz uso de subquery (Select dentro do select),
+  enquanto joined faz uso de join.
 
   🔜  🎀 Mas por estarem em tabelas diferentes, o join sempre irá performar melhor.
 
 ✅ 24. Prática: Atualizando Dados - `Update`
 
-* 🔲 25. Prática: Deletando Dados  - `Delete`
-* 🔲 26. Recapturando
+✅ 25. Prática: Deletando Dados  - `Delete`
+
+✅ 26. Recapturando
 
 ---
 
@@ -403,7 +405,7 @@ session.query(Pais).first()cidades.all()
 ---
 
 * 🔲 27. O que vamos aprender nesta seção?
-* 🔲 28. Revisando a Programação Assíncrona
+* 🔲 28. Revisando a Programação Assíncrona [PDF](python_sqlachemy/SQLAlchemy_Assíncrono/02-revisando-a-programacao-sincrona-e-assincrona.pdf)
 * 🔲 29. Prática: Refaturando o Projeto
 * 🔲 30. Prática: Refatorando o arquivo db_session.py
 * 🔲 31. Prática: Refatorando o Insert

@@ -60,12 +60,15 @@ class NotaFiscal(ModelBase):
 
     id_revendedor = Column(
         Integer,
-        ForeignKey('revendedor.id'),
+        ForeignKey('revendedor.id'
+                   ondelete='CASCADE'
+                   ),
     )
 
     revendedor: Revendedor = relationship(
         'Revendedor',
-        lazy='joined'
+        lazy='joined',
+        cascade='delete'
     )
 
     # lotes:List[Lote]
