@@ -465,3 +465,5 @@ session.query(Pais).first()cidades.all()
 
 * 🔲 61. Recapturando
 * 🔲 62. Quais os Próximos passos
+
+152,153,154,59,139

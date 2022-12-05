@@ -6,7 +6,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.ext.asyncio import AsyncEngine
 from sqlalchemy.ext.asyncio import create_async_engine
 
-from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import declarative_base
 
 ModelBase = declarative_base()
 
@@ -29,7 +29,7 @@ def createEngine(sql: bool = False):
     global __async_engine
 
     # dados de acesso postgres
-    user = 'postgres'
+    user = 'pos tgres'
     password = 'postgres'
     bd = 'picoles'
     port = '5441'
@@ -53,7 +53,7 @@ def createEngine(sql: bool = False):
         )
     else:
         # Postgres
-        conn_str = f'postgres+asyncpg://{user}:{password}@localhost:{port}/{bd}'
+        conn_str = f'postgresql+asyncpg://{user}:{password}@localhost:{port}/{bd}'
         __async_engine = create_async_engine(
             url=conn_str,
             echo=False
@@ -75,7 +75,7 @@ def create_session():
     global __async_engine
 
     if not __async_engine:
-        return createEngine()
+        createEngine(sql=True)
 
     __async_session = sessionmaker(
         __async_engine,
@@ -83,7 +83,7 @@ def create_session():
         class_=AsyncSession
     )
 
-    session = __async_session
+    session = __async_session()
 
     return session
 
@@ -101,7 +101,7 @@ async def create_tables():
     global __async_engine
 
     if not __async_engine:
-        return create_async_engine()
+        return createEngine()
 
     import model.__all_models
 

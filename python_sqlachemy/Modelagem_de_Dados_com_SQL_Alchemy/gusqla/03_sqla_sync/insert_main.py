@@ -1,4 +1,4 @@
-
+import asyncio
 from conf.db_session import create_session
 from model.aditivo_nutritivo import AditivoNutritivo
 from model.conservante import Conservante
@@ -13,7 +13,7 @@ from model.tipo_picole import TipoPicole
 
 
 # 1-AditivoNutritivo
-def insert_aditivo_nutritivo():
+async def insert_aditivo_nutritivo():
     """
         The insert_aditivo_nutritivo function inserts a new Aditivo Nutritivo into the database.
         It requires no input and returns nothing.
@@ -27,22 +27,25 @@ def insert_aditivo_nutritivo():
 
     formula_quimita = input('Informe a fórmula química do Aditivo Nutritivo:')
 
-    an = AditivoNutritivo(nome=nome, formula_quimita=formula_quimita)
+    an = AditivoNutritivo(
+        nome=nome,
+        formula_quimita=formula_quimita
+    )
 
-    with create_session() as session:
+    async with create_session() as session:  # type: ignore
         session.add(an)
-        session.commit()
+        await session.commit()
 
     # print('Aditivo Nutritivo cadastrado com sucesso!')
     # print(f'ID: {an.id}')
     # print(f'Data de Criação: {an.data_criacao}')
     # print(f'Nome: {an.nome}')
     # print(f'Formula Quimica: {an.formula_quimica}')
-    return an
+        return an
 
 
 # 2- Sabor
-def insert_sabor():
+async def insert_sabor():
     """
         The insert_sabor function inserts a new Sabor object into the database.
         It requires no parameters and returns no values.
@@ -57,9 +60,9 @@ def insert_sabor():
 
     sb = Sabor(nome=nome)
 
-    with create_session() as session:
+    async with create_session() as session:  # type: ignore
         session.add(sb)
-        session.commit()
+        await session.commit()
 
     print('Sabor cadastrado com sucesso!')
     print(f'ID: {sb.id}')
@@ -69,7 +72,7 @@ def insert_sabor():
 # 3- tipo de embalagem
 
 
-def insert_tipo_embalagem():
+async def insert_tipo_embalagem():
     """
         The insert_tipo_embalagem function inserts a new tipo_embalagem into the database.
 
@@ -84,9 +87,9 @@ def insert_tipo_embalagem():
 
     temb = TipoEmbalagem(nome=nome)
 
-    with create_session() as session:
+    async with create_session() as session:  # type: ignore
         session.add(temb)
-        session.commit()
+        await session.commit()
 
     print('Tipo de Embalagem cadastrado com sucesso!')
     print(f'ID: {temb.id}')
@@ -96,7 +99,7 @@ def insert_tipo_embalagem():
 # 4- tipo de Picole
 
 
-def insert_tipo_picole():
+async def insert_tipo_picole():
     """
         The insert_tipo_picole function inserts a new TipoPicole into the database.
         It requires no parameters and returns nothing.
@@ -111,9 +114,9 @@ def insert_tipo_picole():
 
     tip = TipoPicole(nome=nome)
 
-    with create_session() as session:
+    async with create_session() as session:  # type: ignore
         session.add(tip)
-        session.commit()
+        await session.commit()
 
     print('Tipo de Picole cadastrado com sucesso!')
     print(f'ID: {tip.id}')
@@ -123,7 +126,7 @@ def insert_tipo_picole():
 # 5- Ingredientes
 
 
-def insert_ingrediente():
+async def insert_ingrediente():
     """
         The insert_ingrediente function inserts a new Ingrediente into the database.
         It requires no parameters and returns nothing.
@@ -138,9 +141,9 @@ def insert_ingrediente():
 
     ingred = Ingrediente(nome=nome)
 
-    with create_session() as session:
+    async with create_session() as session:  # type: ignore
         session.add(ingred)
-        session.commit()
+        await session.commit()
 
     # print('Ingrediente cadastrado com sucesso!')
     # print(f'ID: {ingred.id}')
@@ -152,7 +155,7 @@ def insert_ingrediente():
 # 6- Conservante
 
 
-def insert_conservante():
+async def insert_conservante():
     """
         The insert_conservante function inserts a new conservante into the database.
         It requires no parameters and returns nothing.
@@ -169,9 +172,9 @@ def insert_conservante():
 
     conserv = Conservante(nome=nome, descricao=descricao)
 
-    with create_session() as session:
+    async with create_session() as session:  # type: ignore
         session.add(conserv)
-        session.commit()
+        await session.commit()
 
     # print('Conservante cadastrado com sucesso!')
     # print(f'ID: {conserv.id}')
@@ -184,7 +187,7 @@ def insert_conservante():
 # 7- Revendedor
 
 
-def insert_revendedor():
+async def insert_revendedor():
     """
         The insert_revendedor function inserts a new revendedor into the database.
 
@@ -202,16 +205,16 @@ def insert_revendedor():
 
     revend = Revendedor(cnpj=cnpj, razao_social=razao_social, contato=contato)
 
-    with create_session() as session:
+    async with create_session() as session:  # type: ignore
         session.add(revend)
-        session.commit()
+        await session.commit()
 
     return revend
 
 # 8- lote
 
 
-def insert_lote():
+async def insert_lote():
     """
         The insert_lote function inserts a new lote into the database.
 
@@ -227,9 +230,9 @@ def insert_lote():
 
     lt = Lote(id_tipo_picole=id_tp_picole, quantidade=quantidade)
 
-    with create_session() as session:
+    async with create_session() as session:  # type: ignore
         session.add(lt)
-        session.commit()
+        await session.commit()
 
     return lt
 
@@ -237,7 +240,7 @@ def insert_lote():
 # 9- nota fiscal
 
 
-def insert_nota_fiscal():
+async def insert_nota_fiscal():
     """
         The insert_nota fiscal function inserts a new nota fiscal into the database.
 
@@ -262,13 +265,13 @@ def insert_nota_fiscal():
         id_revendedor=id_revd)
 
     lt_01 = insert_lote()
-    ntfisc.lotes.append(lt_01)
+    ntfisc.lotes.append(lt_01)  # type: ignore
 
     lt_02 = insert_lote()
-    ntfisc.lotes.append(lt_02)
+    ntfisc.lotes.append(lt_02)  # type: ignore
 
     revd = insert_revendedor()
-    id_revd = revd.id
+    id_revd = revd.id  # type: ignore
 
     with create_session() as session:
         session.add(ntfisc)
@@ -315,17 +318,17 @@ def insert_picole():
     )
 
     ingred_01 = insert_ingrediente()
-    picole.ingredientes.append(ingred_01)
+    picole.ingredientes.append(ingred_01)  # type: ignore
 
     ingred_02 = insert_ingrediente()
-    picole.ingredientes.append(ingred_02)
+    picole.ingredientes.append(ingred_02)  # type: ignore
 
     conprov_01 = insert_conservante()
 
-    picole.conservantes.append(conprov_01)
+    picole.conservantes.append(conprov_01)  # type: ignore
 
     nutri_01 = insert_aditivo_nutritivo()
-    picole.aditivos_nutritivos.append(nutri_01)
+    picole.aditivos_nutritivos.append(nutri_01)  # type: ignore
 
     with create_session() as session:
         session.add(picole)
@@ -352,9 +355,9 @@ def inserir_dados():
         :doc-author: Trelent
         """
     # 1
-    insert_aditivo_nutritivo()
+    # async.run(insert_aditivo_nutritivo())
     # 2
-    insert_sabor()
+    # insert_sabor()
     # 3
     insert_tipo_embalagem()
 
