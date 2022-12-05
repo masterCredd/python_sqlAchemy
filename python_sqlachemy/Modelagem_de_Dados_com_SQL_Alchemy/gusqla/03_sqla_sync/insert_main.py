@@ -1,5 +1,5 @@
 
-from conf.db_session import craete_session
+from conf.db_session import create_session
 from model.aditivo_nutritivo import AditivoNutritivo
 from model.conservante import Conservante
 from model.ingrediente import Ingrediente
@@ -23,16 +23,15 @@ def insert_aditivo_nutritivo():
     """
     print('Cadastrando Aditivo Nutritivo')
 
-    nome= input('Informe o nome do Aditivo Nutritivo:')
+    nome = input('Informe o nome do Aditivo Nutritivo:')
 
-    formula_quimita=input('Informe a fórmula química do Aditivo Nutritivo:')
+    formula_quimita = input('Informe a fórmula química do Aditivo Nutritivo:')
 
-    an =AditivoNutritivo(nome=nome,formula_quimita=formula_quimita)
+    an = AditivoNutritivo(nome=nome, formula_quimita=formula_quimita)
 
-    with craete_session() as session:
-            session.add(an)
-            session.commit()
-
+    with create_session() as session:
+        session.add(an)
+        session.commit()
 
     # print('Aditivo Nutritivo cadastrado com sucesso!')
     # print(f'ID: {an.id}')
@@ -40,9 +39,6 @@ def insert_aditivo_nutritivo():
     # print(f'Nome: {an.nome}')
     # print(f'Formula Quimica: {an.formula_quimica}')
     return an
-
-
-
 
 
 # 2- Sabor
@@ -61,10 +57,9 @@ def insert_sabor():
 
     sb = Sabor(nome=nome)
 
-    with craete_session() as session:
+    with create_session() as session:
         session.add(sb)
         session.commit()
-
 
     print('Sabor cadastrado com sucesso!')
     print(f'ID: {sb.id}')
@@ -72,6 +67,8 @@ def insert_sabor():
     print(f'Nome: {sb.nome}')
 
 # 3- tipo de embalagem
+
+
 def insert_tipo_embalagem():
     """
         The insert_tipo_embalagem function inserts a new tipo_embalagem into the database.
@@ -87,7 +84,7 @@ def insert_tipo_embalagem():
 
     temb = TipoEmbalagem(nome=nome)
 
-    with craete_session() as session:
+    with create_session() as session:
         session.add(temb)
         session.commit()
 
@@ -98,6 +95,7 @@ def insert_tipo_embalagem():
 
 # 4- tipo de Picole
 
+
 def insert_tipo_picole():
     """
         The insert_tipo_picole function inserts a new TipoPicole into the database.
@@ -107,14 +105,13 @@ def insert_tipo_picole():
         :doc-author: Trelent
     """
 
-
     print('Cadastrando Tipo de Picole')
 
     nome = input('Informe o Tipo de Picole:')
 
     tip = TipoPicole(nome=nome)
 
-    with craete_session() as session:
+    with create_session() as session:
         session.add(tip)
         session.commit()
 
@@ -141,7 +138,7 @@ def insert_ingrediente():
 
     ingred = Ingrediente(nome=nome)
 
-    with craete_session() as session:
+    with create_session() as session:
         session.add(ingred)
         session.commit()
 
@@ -168,11 +165,11 @@ def insert_conservante():
 
     nome = input('Informe o conservante:')
 
-    descricao= input('Informe a descrição do conservante')
+    descricao = input('Informe a descrição do conservante')
 
-    conserv = Conservante(nome=nome,descricao=descricao)
+    conserv = Conservante(nome=nome, descricao=descricao)
 
-    with craete_session() as session:
+    with create_session() as session:
         session.add(conserv)
         session.commit()
 
@@ -195,7 +192,6 @@ def insert_revendedor():
         :doc-author: Trelent
     """
 
-
     print('Cadastrando revendedor')
 
     cnpj = input('Informe o cnpj do Revendedor:')
@@ -206,7 +202,7 @@ def insert_revendedor():
 
     revend = Revendedor(cnpj=cnpj, razao_social=razao_social, contato=contato)
 
-    with craete_session() as session:
+    with create_session() as session:
         session.add(revend)
         session.commit()
 
@@ -225,14 +221,13 @@ def insert_lote():
 
     print('Cadastrando lote')
 
-
-    id_tp_picole= input('Informe o id do picole')
+    id_tp_picole = input('Informe o id do picole')
 
     quantidade = input('Informe a quantidade do lote:')
 
     lt = Lote(id_tipo_picole=id_tp_picole, quantidade=quantidade)
 
-    with craete_session() as session:
+    with create_session() as session:
         session.add(lt)
         session.commit()
 
@@ -256,7 +251,7 @@ def insert_nota_fiscal():
 
     num_serie = input('Informe numero de serie da Nota Fiscal:')
 
-    descricao= input('Informe a descrição da Nota Fiscal')
+    descricao = input('Informe a descrição da Nota Fiscal')
 
     id_revd = input('Informe o código do Revendedor')
 
@@ -266,16 +261,16 @@ def insert_nota_fiscal():
         descricao=descricao,
         id_revendedor=id_revd)
 
-    lt_01=insert_lote()
+    lt_01 = insert_lote()
     ntfisc.lotes.append(lt_01)
 
     lt_02 = insert_lote()
     ntfisc.lotes.append(lt_02)
 
-    revd=insert_revendedor()
-    id_revd=revd.id
+    revd = insert_revendedor()
+    id_revd = revd.id
 
-    with craete_session() as session:
+    with create_session() as session:
         session.add(ntfisc)
         session.commit()
 
@@ -304,7 +299,7 @@ def insert_picole():
 
     preco = input('Informe o preço do Picole:')
 
-    tp_embalagem=input('Informe o ID do Tipo da Embalagem:')
+    tp_embalagem = input('Informe o ID do Tipo da Embalagem:')
 
     sab = input('Informe o ID do Sabor :')
 
@@ -319,24 +314,20 @@ def insert_picole():
         preco=preco
     )
 
-    ingred_01=insert_ingrediente()
+    ingred_01 = insert_ingrediente()
     picole.ingredientes.append(ingred_01)
 
     ingred_02 = insert_ingrediente()
     picole.ingredientes.append(ingred_02)
 
-
-
-    conprov_01=insert_conservante()
+    conprov_01 = insert_conservante()
 
     picole.conservantes.append(conprov_01)
 
-    nutri_01=insert_aditivo_nutritivo()
+    nutri_01 = insert_aditivo_nutritivo()
     picole.aditivos_nutritivos.append(nutri_01)
 
-
-
-    with craete_session() as session:
+    with create_session() as session:
         session.add(picole)
         session.commit()
 
@@ -350,7 +341,6 @@ def insert_picole():
     print(f'Ingredientes: {picole.ingredientes}')
     print(f'Conservantes: {picole.conservantes}')
     print(f'Aditivos Nutritivos : {picole.aditivos_nutritivos}')
-
 
 
 def inserir_dados():
@@ -400,7 +390,5 @@ def inserir_dados():
     insert_picole()
 
 
-
-
-if __name__=="__main__":
+if __name__ == "__main__":
     inserir_dados()

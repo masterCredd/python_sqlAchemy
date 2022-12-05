@@ -410,7 +410,8 @@ session.query(Pais).first()cidades.all()
 
 ✅29. Prática: Refaturando o Projeto
 
-* 🔲 30. Prática: Refatorando o arquivo db_session.py
+✅ 30. Prática: Refatorando o arquivo db_session.py
+
 * 🔲 31. Prática: Refatorando o Insert
 * 🔲 32. Prática: Refatorando Zerar a Base e Popular
 * 🔲 33. Prática: Refatorando Select - **Parte 1**
